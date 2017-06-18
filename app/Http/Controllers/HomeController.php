@@ -46,7 +46,13 @@ class HomeController extends Controller
 
     public function dispensary()
     {
-        return "dispensary";
+        $user = Auth::user();
+
+        $data = [
+            "user" => $user
+        ];
+
+        return view('home.dispensary')->with($data);
     }
 
     public function edibles()
