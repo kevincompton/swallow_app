@@ -52,7 +52,7 @@ class HomeController extends Controller
             "user" => $user
         ];
 
-        return view('home.dispensary')->with($data);
+        return view('home.dispensaries')->with($data);
     }
 
     public function edibles()
