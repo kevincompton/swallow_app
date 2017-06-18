@@ -12,7 +12,7 @@ class wpCompany extends Model
     protected $table = 'wp_posts';
 
     protected $fillable = [
-        'post_title', 'post_type'
+        'post_title', 'post_type', 'post_content', 'post_excerpt', 'to_ping', 'pinged', 'post_content_filtered', 'post_date', 'post_date_gmt', 'post_modified', 'post_modified_gmt'
     ];
 
     public function scopeCompanies($query)

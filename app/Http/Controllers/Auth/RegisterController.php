@@ -7,6 +7,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use DateTime;
 
 class RegisterController extends Controller
 {
@@ -78,10 +79,18 @@ class RegisterController extends Controller
             $wpCompany = wpCompany::create([
                 'post_title' => $data['company'],
                 'post_type' => $company,
-                'post_content' => ''
+                'post_date' => new DateTime(),
+                'post_date_gmt' => new DateTime(),
+                'post_modified' => new DateTime(),
+                'post_modified_gmt' => new DateTime(),
+                'post_content' => '',
+                'post_excerpt' => '',
+                'to_ping' => '',
+                'pinged' => '',
+                'post_content_filtered' => ''
             ]);
 
-            $wordpress_id = $wpCompany->ID;
+            $wordpress_id = $wpCompany->id;
         }
         return User::create([
             'name' => $data['name'],
