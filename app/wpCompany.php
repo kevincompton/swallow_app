@@ -7,6 +7,7 @@ use DB;
 
 class wpCompany extends Model
 {
+    public $timestamps = false;
     protected $connection = 'wordpress';
     protected $table = 'wp_posts';
 

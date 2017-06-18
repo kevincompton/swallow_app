@@ -77,7 +77,8 @@ class RegisterController extends Controller
             
             $wpCompany = wpCompany::create([
                 'post_title' => $data['company'],
-                'post_type' => $company
+                'post_type' => $company,
+                'post_content' => ''
             ]);
 
             $wordpress_id = $wpCompany->ID;
