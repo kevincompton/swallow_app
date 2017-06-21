@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 42);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -41471,189 +41471,90 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 36 */
+/* 36 */,
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(29);
 
 window.Vue = __webpack_require__(2);
 
+Vue.component('filterable', __webpack_require__(41));
 Vue.component('autocomplete-input', __webpack_require__(34));
 
+var filterProducts = document.getElementById('filterable');
 var onboard = document.getElementById('onboard-autocomplete');
 var autocomplete = document.getElementById('autocomplete');
 
-if (onboard != null) {
+if (filterProducts != null) {
 
-  var app2 = new Vue({
-    el: '#onboard-autocomplete',
-
-    data: {
-      options: [{
-        title: 'First Scene'
-      }, {
-        title: 'Second Scene'
-      }, {
-        title: 'Third Scene'
-      }, {
-        title: 'Fourth Scene'
-      }],
-      category: null,
-      new_form: false,
-      confirm: null,
-      company: null
-    },
-
-    mounted: function mounted() {
-      this.fetchCompanies(this.category);
-    },
-
-
-    methods: {
-      onOptionSelect: function onOptionSelect(option) {
-        if (option.id == 0) {
-          this.new_form = true;
-        } else {
-          this.confirmCompany(option);
-        }
-      },
-
-
-      confirmCompany: function confirmCompany(id) {
-        this.confirm = id;
-      },
-
-      setCompany: function setCompany(company) {
-        this.company = company;
-        console.log(company);
-      },
-
-      clearCompany: function clearCompany() {
-        this.confirm = null;
-        this.company = null;
-      },
-
-      categoryUpdate: function categoryUpdate() {
-        this.fetchCompanies(this.category);
-      },
-
-      fetchCompanies: function fetchCompanies() {
-        var parent = this;
-
-        console.log('companies');
-
-        $.ajax({
-          type: 'GET',
-          url: '/companies/' + parent.category,
-          dataType: 'json',
-          async: false,
-          success: function success(data) {
-            var companies = [];
-
-            for (var i = data.companies.length - 1; i >= 0; i--) {
-              var company = {
-                title: data.companies[i].post_title,
-                id: data.companies[i].ID
-              };
-              companies.push(company);
-            }
-
-            companies.push({ title: 'Add new company...', id: 0 });
-
-            parent.options = companies;
-          }
-        });
-      }
-
-    }
-
-  });
-} else if (autocomplete != null) {
-
-  var app = new Vue({
-    el: '#autocomplete',
+  var filterable = new Vue({
+    el: '#filterable',
 
     data: {
-      options: [{
-        title: 'First Scene',
-        description: 'lorem ipsum dolor amet.',
-        thumbnail: 'http://lorempicsum.com/nemo/200/200/1',
-        meta: 'hgkj'
-      }, {
-        title: 'Second Scene',
-        description: 'lorem ipsum dolor amet.',
-        thumbnail: 'http://lorempicsum.com/nemo/200/200/2',
-        meta: 'hgkj'
-      }, {
-        title: 'Third Scene',
-        description: 'lorem ipsum dolor amet.',
-        thumbnail: 'http://lorempicsum.com/nemo/200/200/3',
-        meta: 'hgkj'
-      }, {
-        title: 'Fourth Scene',
-        description: 'lorem ipsum dolor amet.',
-        thumbnail: 'http://lorempicsum.com/nemo/200/200/4',
-        meta: 'hgkj'
-      }],
-      new_form: false,
-      confirm: null,
-      user_products: []
+      products: [],
+      categories: [],
+      selected: [],
+      paginate: ['products'],
+      limit: 50,
+      keywords: null
     },
 
     mounted: function mounted() {
       this.fetchProducts();
-      this.fetchUserProducts();
+      this.fetchTags();
     },
 
 
-    methods: {
-      onOptionSelect: function onOptionSelect(option) {
-        if (option.product_id == 0) {
-          this.new_form = true;
-        } else {
-          this.confirmProduct(option);
+    computed: {
+
+      searchedProducts: function searchedProducts() {
+        var re = new RegExp(this.keyword, 'i');
+        return this.products.filter(function (o) {
+          return o.name.match(re);
+        });
+      },
+
+      filteredProducts: function filteredProducts() {
+        var parent = this;
+
+        if (this.keywords != null) {
+          var re = new RegExp(parent.keywords, 'i');
+          return parent.products.filter(function (o) {
+            return o.name.match(re);
+          });
         }
-      },
 
+        return parent.products.filter(function (product) {
 
-      confirmProduct: function confirmProduct(id) {
-        this.confirm = id;
-      },
+          if (parent.selected.length == 0) {
+            return true;
+          } else {
 
-      addProduct: function addProduct(id) {
-        var parent = this;
-
-        this.confirm = null;
-
-        console.log('add product ' + id);
-        $.ajax({
-          type: 'GET',
-          url: '/product/link/' + id,
-          dataType: 'json',
-          async: false,
-          success: function success(data) {
-            parent.fetchUserProducts();
-          }
-        });
-      },
-
-      fetchUserProducts: function fetchUserProducts() {
-        var parent = this;
-
-        $.ajax({
-          type: 'GET',
-          url: '/user/products/',
-          dataType: 'json',
-          async: false,
-          success: function success(data) {
-            for (var i = data.products.length - 1; i >= 0; i--) {
-              data.products[i].image = "/images/products/" + data.products[i].image;
-              data.products[i].edit = "/product/edit/" + data.products[i].id;
-              data.products[i].detach = "/product/detach/" + data.products[i].id;
+            for (var i = parent.selected.length - 1; i >= 0; i--) {
+              if (parent.selected[i].products.includes(product.id)) {} else {
+                return false;
+              }
             }
-            parent.user_products = data.products;
+
+            return true;
           }
         });
+      }
+
+    },
+
+    methods: {
+
+      toggleTag: function toggleTag(tag) {
+        var parent = this;
+
+        if (this.selected.includes(tag)) {
+          var p = parent.selected.indexOf(tag);
+          parent.selected.splice(p, 1);
+        } else {
+          parent.selected.push(tag);
+        }
       },
 
       fetchProducts: function fetchProducts() {
@@ -41661,26 +41562,27 @@ if (onboard != null) {
 
         $.ajax({
           type: 'GET',
-          url: '/products/',
+          url: '/client/products',
           dataType: 'json',
           async: false,
           success: function success(data) {
-            var products = [];
 
-            for (var i = data.products.length - 1; i >= 0; i--) {
-              var product = {
-                title: data.products[i].name,
-                description: data.products[i].company,
-                thumbnail: '/images/products/' + data.products[i].image,
-                product_id: data.products[i].id,
-                meta: data.products[i].name + data.products[i].company
-              };
-              products.push(product);
-            }
+            parent.products = data.products;
+          }
+        });
+      },
 
-            products.push({ title: 'Add new product...', description: null, image: null, product_id: 0, meta: 'Add new product' });
+      fetchTags: function fetchTags() {
+        var parent = this;
 
-            parent.options = products;
+        $.ajax({
+          type: 'GET',
+          url: '/client/tags',
+          dataType: 'json',
+          async: false,
+          success: function success(data) {
+
+            parent.categories = data.categories;
           }
         });
       }
@@ -41691,27 +41593,76 @@ if (onboard != null) {
 }
 
 /***/ }),
-/* 37 */,
-/* 38 */
-/***/ (function(module, exports) {
+/* 38 */,
+/* 39 */,
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    template: '#filter-template',
+
+    data: function data() {
+        return {
+            categories: []
+        };
+    },
+
+
+    props: ['filterable'],
+
+    mounted: function mounted() {},
+
+
+    methods: {}
+});
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 40 */,
-/* 41 */,
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(36);
-__webpack_require__(38);
-module.exports = __webpack_require__(39);
+var Component = __webpack_require__(9)(
+  /* script */
+  __webpack_require__(40),
+  /* template */
+  null,
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Filterable.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d22dd80e", Component.options)
+  } else {
+    hotAPI.reload("data-v-d22dd80e", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 42 */,
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(37);
 
 
 /***/ })

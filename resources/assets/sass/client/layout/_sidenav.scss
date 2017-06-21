@@ -1,0 +1,12 @@
+aside.sidenav {
+  display: flex;
+  .sidenav-wrapper {
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 30px;
+  }
+  .category {
+    display: block;
+    margin-bottom: 15px;
+  }
+}

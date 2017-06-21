@@ -8,7 +8,7 @@ use DB;
 
 class APIController extends Controller
 {
-    
+
   public function fetchProducts()
   {
     $products = \App\Product::all();

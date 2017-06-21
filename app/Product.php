@@ -14,12 +14,22 @@ class Product extends Model
 
     public function scopeActive($query)
     {
-        return $query->where('deactivated', '==', 0);
+        return $query->where('deactivate', '==', 0);
     }
 
-    public function scopeDeactived($query)
+    public function scopeImage($query)
     {
-        return $query->where('deactivated', '==', 1);
+        return $query->where('image', '!=', 'empty');
+    }
+
+    public function scopeDeactivated($query)
+    {
+        return $query->where('deactivate', '==', 1);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
     }
     
 }

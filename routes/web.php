@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ClientController@index');
+Route::get('/product/{id}', 'ClientController@show');
+
+// client API
+Route::get('/client/products', 'ClientController@fetchProducts');
+Route::get('/client/tags', 'ClientController@fetchTags');
 
 Auth::routes();
 
@@ -36,9 +39,17 @@ Route::get('/product/delete/{id}', 'ProductController@delete');
 // Admin routes
 Route::get('/admin', 'AdminController@index')->middleware('admin');
 Route::get('/approve/{id}', 'AdminController@approve')->middleware('admin');
+Route::get('/sync/products', 'ImportController@syncProducts')->middleware('admin');
+Route::get('/sync/tags', 'ImportController@syncTags')->middleware('admin');
+Route::get('/sync/images', 'ImportController@syncImages')->middleware('admin');
 
 // internal API
 Route::get('/products', 'APIController@fetchProducts');
 Route::get('/user/products', 'APIController@fetchUserProducts');
 Route::get('/companies/{category}', 'APIController@wpUsers');
 Route::get('/wp/products/{company}', 'APIController@wpProducts');
+
+
+
+// Test Routes
+

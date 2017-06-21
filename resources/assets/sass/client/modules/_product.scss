@@ -1,0 +1,129 @@
+.product-single {
+  display: block;
+  padding: 0 3rem;
+  width: 100%;
+
+  .flex-container {
+      font-size: 1.6rem;
+      line-height: 133%;
+      margin: 3rem 0;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+  }
+
+  .product {
+      width: 100%;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .product {
+          padding-right: 6rem;
+          width: 75%;
+      }
+  }
+
+  .tags {
+      margin: 0.75rem 0;
+  }
+
+  .tags span {
+      border: 1px #fe4d82 solid;
+      border-radius: 1rem;
+      color: #fe4d82;
+      display: inline-block;
+      font-size: 0.8rem;
+      line-height: 100%;
+      margin: 0 1rem 1rem 0;
+      padding: 0.25rem 0.75rem;
+  }
+
+  .product-info {
+      margin: 1.5rem 0;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .product-info {
+          display: flex;
+          flex-wrap: wrap;
+      }
+  }
+
+  @media screen and (min-width: 60rem) {
+      .images {
+          width: 25%;
+      }
+  }
+
+  .featured-image {
+      align-items: flex-start;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      /*max-height: 40vh;
+      max-width: 40rem;*/
+  }
+
+  .featured-image img {
+      max-height: 100%;
+      max-width: 100%;
+  }
+
+  .other-images {
+      display: flex;
+      margin: 1.5rem 0 3rem;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .other-images {
+          margin: 1.5rem 0;
+      }
+  }
+
+  .other-images .thumbnail {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px #fff solid;
+      cursor: pointer;
+      height: 6rem;
+      margin-right: 3rem;
+      transition: all .3s;
+      width: 6rem;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .other-images .thumbnail:hover {
+          border: 1px #fe4d82 solid;
+      }
+  }
+
+  .copy {
+      width: 75%;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .copy {
+          padding: 0 3rem;
+      }   
+  }
+
+  .meta {
+      font-size: 1.4rem;
+  }
+
+  .meta > div {
+      padding-bottom: 1.5rem;
+  }
+
+  .description {
+      font-size: 1.4rem;
+      padding-bottom: 1.5rem;    
+  }
+}

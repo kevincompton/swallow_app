@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background: #fff;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+h3 {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-size: 2.4rem;
+  line-height: 133%;
+}
+
+h4 {
+  font-family: 'Gotham-Bold', sans-serif;
+  font-size: 1.8rem;
+  line-height: 133%;
+}
+
+strong {
+  font-family: 'Gotham-Medium';
+}
+
+button[type="submit"], .read-more {
+  background: #fe4d82;
+  border: 3px #fe4d82 solid;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Gotham-Bold', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  margin: 1.5rem auto 0;
+  padding: 1rem 3.5rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  z-index: 1;
+}
+
+button[type="submit"]:after, .read-more:after {
+  background: #fff;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 0;
+  z-index: -1;
+}

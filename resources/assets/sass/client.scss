@@ -1,0 +1,71 @@
+
+
+@import "/client/_reset";
+
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src:  url('/fonts/gotham-light.woff2') format('woff2'),
+        url('/fonts/gotham-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src:  url('/fonts/gotham-book.woff2') format('woff2'),
+        url('/fonts/gotham-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src:  url('/fonts/gotham-medium.woff2') format('woff2'),
+        url('/fonts/gotham-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src:  url('/fonts/gotham-bold.woff2') format('woff2'),
+        url('/fonts/gotham-bold.woff') format('woff');
+}
+
+@import "/client/_junkdrawer";
+
+// Layout
+@import "/client/layout/_sidenav";
+@import "/client/layout/_header";
+
+.client-wrapper {
+  padding-top: 7.5rem;
+}
+
+// Transitions
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+} 
+
+// Forms
+.input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  margin-bottom: 45px;
+}
+.form-control {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  display: block;
+  width: 100%;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+// Modules
+@import "/client/modules/_listproduct";
+@import "/client/modules/_product";
