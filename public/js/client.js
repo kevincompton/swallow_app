@@ -41483,8 +41483,6 @@ Vue.component('filterable', __webpack_require__(41));
 Vue.component('autocomplete-input', __webpack_require__(34));
 
 var filterProducts = document.getElementById('filterable');
-var onboard = document.getElementById('onboard-autocomplete');
-var autocomplete = document.getElementById('autocomplete');
 
 if (filterProducts != null) {
 
@@ -41508,17 +41506,10 @@ if (filterProducts != null) {
 
     computed: {
 
-      searchedProducts: function searchedProducts() {
-        var re = new RegExp(this.keyword, 'i');
-        return this.products.filter(function (o) {
-          return o.name.match(re);
-        });
-      },
-
       filteredProducts: function filteredProducts() {
         var parent = this;
 
-        if (this.keywords != null) {
+        if (this.keywords != null && this.keywords.length > 0) {
           var re = new RegExp(parent.keywords, 'i');
           return parent.products.filter(function (o) {
             return o.name.match(re);

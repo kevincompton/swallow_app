@@ -6,8 +6,6 @@ Vue.component('filterable', require('./components/Filterable.vue'));
 Vue.component('autocomplete-input', require('./components/Autocomplete.vue'));
 
 var filterProducts = document.getElementById('filterable');
-var onboard = document.getElementById('onboard-autocomplete');
-var autocomplete = document.getElementById('autocomplete');
 
 if(filterProducts != null){
 
@@ -30,15 +28,10 @@ if(filterProducts != null){
 
     computed: {
 
-      searchedProducts: function() {
-        const re = new RegExp(this.keyword, 'i');
-        return this.products.filter(o => o.name.match(re));
-      },
-
       filteredProducts: function() {
         var parent = this; 
 
-        if(this.keywords != null) {
+        if(this.keywords != null && this.keywords.length > 0) {
           const re = new RegExp(parent.keywords, 'i');
           return parent.products.filter(o => o.name.match(re));
         }

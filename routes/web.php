@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'ClientController@index');
-Route::get('/product/{id}', 'ClientController@show');
+Route::get('/product/{id}', 'ClientController@showProduct');
+Route::get('/company/{id}', 'ClientController@showCompany');
 
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
@@ -42,6 +43,8 @@ Route::get('/approve/{id}', 'AdminController@approve')->middleware('admin');
 Route::get('/sync/products', 'ImportController@syncProducts')->middleware('admin');
 Route::get('/sync/tags', 'ImportController@syncTags')->middleware('admin');
 Route::get('/sync/images', 'ImportController@syncImages')->middleware('admin');
+Route::get('/sync/companies', 'ImportController@syncCompanies')->middleware('admin');
+Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');
 
 // internal API
 Route::get('/products', 'APIController@fetchProducts');

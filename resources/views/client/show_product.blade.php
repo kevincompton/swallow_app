@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="flex-container client-wrapper">
   <div class="product-single">
     <div class="flex-container">
         <div class="product">
@@ -35,7 +36,34 @@
             </div>
         </div>
 
+        @if(isset($company->name))
+            <div class="related container">
+                <h5>More from <a href="/company/{{ $company->id }}">{{ $company->name }}</a></h5>
+
+                <ul class="related-products">
+                    @foreach($related_products as $product)
+                        <li>
+                            <a href="/product/{{ $product->id }}">
+                                @if($product->image != "empty")
+                                    <div class="product-image">
+                                        <img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/{{ $product->image }}">
+                                    </div>
+                                @else
+                                    <div class="logo">
+                                        <img class="lips" src="/images/logo/logo-lips-black.svg">
+                                    </div>
+                                @endif
+                                <span>{{ $product->name }}</span>
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+
+            </div>
+        @endif
+
     </div>
   </div>
+</div>
 
 @endsection

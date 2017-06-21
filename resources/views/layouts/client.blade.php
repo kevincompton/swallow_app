@@ -15,48 +15,45 @@
 </head>
 <body>
 
-    <div id="filterable">
+    <header id="client-header">
+      <div class="header container">
+        <a class="logo" href="/">
+          <img class="lips" src="/images/logo/logo-lips-black.svg">
+          <div class="words">
+            <img class="text" src="/images/logo/logo-text.svg">
+            <span class="beta">BETA</span>
+          </div>
+        </a>
 
-      <header id="client-header">
-        <div class="header container">
-          <a class="logo" href="/">
-            <img class="lips" src="/images/logo/logo-lips-black.svg">
-            <div class="words">
-              <img class="text" src="/images/logo/logo-text.svg">
-              <span class="beta">BETA</span>
+        <nav class="desktop-menu">
+          <a href="#">Edible Education</a>
+          <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
+          <a href="#">Dispensaries</a>
+        </nav>
+
+        <div class="mobile-menu">
+          <a class="menu-button">
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </a>
 
-          <nav class="desktop-menu">
+          <nav class="mobile-nav">
+            <a href="/">Home</a>
             <a href="#">Edible Education</a>
             <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
             <a href="#">Dispensaries</a>
           </nav>
-
-          <div class="mobile-menu">
-            <a class="menu-button">
-              <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </a>
-
-            <nav class="mobile-nav">
-              <a href="/">Home</a>
-              <a href="#">Edible Education</a>
-              <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
-              <a href="#">Dispensaries</a>
-            </nav>
-          </div>
         </div>
-      </header>
-
-      <div class="flex-container client-wrapper">
-        @yield('content')
       </div>
+    </header>
+
+    
+    @yield('content')
+
           
-    </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/client.js') }}"></script>

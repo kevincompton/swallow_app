@@ -12,6 +12,11 @@ class Product extends Model
         return $this->belongsToMany('App\User');
     }
 
+    public function companies()
+    {
+        return $this->belongsToMany('App\Company');
+    }
+
     public function scopeActive($query)
     {
         return $query->where('deactivate', '==', 0);

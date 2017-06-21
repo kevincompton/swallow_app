@@ -17,15 +17,32 @@ class ClientController extends Controller
 
     }
 
-    public function show($id)
+    public function showProduct($id)
     {
       $product = \App\Product::find($id);
+      $company = $product->companies()->get()->first();
+      $related_products = $company->products()->get()->take(5);
 
       $data = [
-        "product" => $product
+        "product" => $product,
+        "company" => $company,
+        "related_products" => $related_products
       ];
 
-      return view('client.show')->with($data);
+      return view('client.show_product')->with($data);
+    }
+
+    public function showCompany($id)
+    {
+      $company = \App\Company::find($id);
+      $products = $company->products()->get();
+
+      $data = [
+        "products" => $products,
+        "company" => $company
+      ];
+
+      return view('client.show_company')->with($data);
     }
 
     public function fetchProducts()

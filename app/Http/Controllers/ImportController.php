@@ -15,8 +15,9 @@ class ImportController extends Controller
       $wpIDs = DB::table('companies')->select('wordpress_id')->get();
 
       foreach ($wpCompanies as $key => $wpCompany) {
+
         if($wpIDs->contains('wordpress_id', $wpCompany->ID)) {
-          echo 'skipped product ' . $wProduct->ID;
+          echo 'skipped company ' . $wpCompany->ID;
         } else {
 
           $company = new \App\Company;
@@ -25,8 +26,42 @@ class ImportController extends Controller
           $company->website = $this->syncMeta('website', $wpCompany->ID);
           $company->instagram = $this->syncMeta('instagram', $wpCompany->ID);
           $company->description = $this->syncMeta('info', $wpCompany->ID);
+          $company->wordpress_id = $wpCompany->ID;
+          $company->save();
+
+          $this->attachProducts($wpCompany->ID);
+
+          echo "added company " . $wpCompany->ID;
         }
 
+      }
+
+    }
+
+    public function attachProducts()
+    {
+      $companies = \App\Company::all();
+
+      foreach ($companies as $key => $company) {
+        $product_keys = DB::connection('wordpress')->table('wp_postmeta')
+                ->where('meta_key', 'like', 'product%')
+                ->where('post_id', $company->wordpress_id)
+                ->select('meta_value')
+                ->get();
+
+        if(count($product_keys) > 0) {
+          foreach ($product_keys as $key => $product_key) {
+            $product_id = DB::table('products')
+                          ->where('wordpress_id', $product_key->meta_value)
+                          ->select('id')
+                          ->get();
+
+            if(count($product_id) > 0) {
+              $company->products()->attach($product_id->first()->id);
+            }
+          }
+        }
+        
       }
 
     }
