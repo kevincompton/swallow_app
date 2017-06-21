@@ -45,6 +45,7 @@ Route::get('/sync/tags', 'ImportController@syncTags')->middleware('admin');
 Route::get('/sync/images', 'ImportController@syncImages')->middleware('admin');
 Route::get('/sync/companies', 'ImportController@syncCompanies')->middleware('admin');
 Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');
+Route::get('/sync/company/images', 'ImportController@companyImages')->middleware('admin');
 
 // internal API
 Route::get('/products', 'APIController@fetchProducts');

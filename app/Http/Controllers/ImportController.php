@@ -29,10 +29,26 @@ class ImportController extends Controller
           $company->wordpress_id = $wpCompany->ID;
           $company->save();
 
-          $this->attachProducts($wpCompany->ID);
-
           echo "added company " . $wpCompany->ID;
         }
+
+      }
+
+    }
+
+    public function companyImages()
+    {
+      $companies = \App\Company::all();
+
+      foreach ($companies as $key => $company) {
+
+        $image_id = $this->syncMeta('featured_image', $company->wordpress_id);
+        $image_s3_info = $this->syncMeta('amazonS3_info', $image_id);
+        $image_s3_info = substr($image_s3_info, strpos($image_s3_info, 'wp-content'));
+        $image_path = strtok($image_s3_info, '"');
+
+        $company->logo = $image_path;
+        $company->save();
 
       }
 
