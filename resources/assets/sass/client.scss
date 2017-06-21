@@ -32,6 +32,7 @@
 // Layout
 @import "/client/layout/_sidenav";
 @import "/client/layout/_header";
+@import "/client/layout/_footer"; 
 
 .client-wrapper {
   padding-top: 7.5rem;
@@ -64,10 +65,22 @@
   background-image: none;
   border: 1px solid #ccc;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
+} 
 
 // Modules
 @import "/client/modules/_listproduct";
 @import "/client/modules/_product";
 @import "/client/modules/_relatedproducts";
 @import "/client/modules/_company";
+@import "/client/modules/_listdispensaries";
+@import "/client/modules/_dispensary";
+@import "/client/modules/_companyinventory";
+@import "/client/modules/_education";
+@import "/client/modules/_dispensaryindex";
+
+
+
+
+
+
+

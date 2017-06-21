@@ -12,9 +12,26 @@ class ClientController extends Controller
     {
 
       $data = [];
-
       return view('client.index')->with($data);
 
+    }
+
+    public function education()
+    {
+      $data = [];
+
+      return view('client.education')->with($data);
+    }
+
+    public function dispensaryIndex()
+    {
+      $dispensaries = \App\Company::dispensaries()->get();
+
+      $data = [
+        "dispensaries" => $dispensaries
+      ];
+
+      return view('client.dispensary_index')->with($data);
     }
 
     public function showProduct($id)
@@ -22,11 +39,13 @@ class ClientController extends Controller
       $product = \App\Product::find($id);
       $company = $product->companies()->get()->first();
       $related_products = $company->products()->get()->take(5);
+      $dispensaries = $product->companies()->where('category', 'dispensary')->get();
 
       $data = [
         "product" => $product,
         "company" => $company,
-        "related_products" => $related_products
+        "related_products" => $related_products,
+        "dispensaries" => $dispensaries
       ];
 
       return view('client.show_product')->with($data);
@@ -43,6 +62,19 @@ class ClientController extends Controller
       ];
 
       return view('client.show_company')->with($data);
+    }
+
+    public function showDispensary($id)
+    {
+      $dispensary = \App\Company::find($id);
+      $products = $dispensary->products()->get();
+
+      $data = [
+        "products" => $products,
+        "dispensary" => $dispensary
+      ];
+
+      return view('client.show_dispensary')->with($data);
     }
 
     public function fetchProducts()

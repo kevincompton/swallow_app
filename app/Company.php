@@ -17,4 +17,9 @@ class Company extends Model
         return $this->belongsToMany('App\Product');
     }
 
+    public function scopeDispensaries($query)
+    {
+        return $query->where('category', '=', 'dispensary');
+    }
+
 }

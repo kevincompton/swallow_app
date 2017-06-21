@@ -1,0 +1,142 @@
+.dispensary-wrapper {
+  display: block;
+  width: 100%;
+
+  .dispensary-locator {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .left-content {
+      margin: 3rem;
+      min-height: 80vh;
+      position: relative;
+      width: calc(100% - 6rem);
+  }
+
+  @media screen and (min-width: 60rem) {
+      .left-content {
+          width: calc(50% - 6rem);
+      }
+  }
+
+
+  .right-content {
+      display: flex;
+      padding: 4.5rem;
+      width: 100%;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .right-content {
+          width: 50%;
+      }
+  }
+  form {
+    display: flex;
+    margin: 1.5rem 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 60rem) {
+      form {
+          width: 90%;
+      }
+  }
+
+  form input[type="text"] {
+      border: 1px #cacaca solid;
+      border-right: 0px;
+      color: #000;
+      flex: 1;
+      font-size: 1.4rem;
+      margin: 0;
+      letter-spacing: 0.02rem;
+      padding: 0.5rem 2rem;
+      -webkit-appearance: none;
+      width: 75%;
+  }
+
+  input[type="email"]::-webkit-input-placeholder {
+      color: #cacaca;
+  }
+
+  input[type="email"]::-moz-placeholder {
+      color: #cacaca;
+  }
+
+  input[type="email"]:-ms-input-placeholder {
+      color: #cacaca;
+  }
+
+  input[type="email"]:-moz-placeholder {
+      color: #cacaca;
+  }
+
+  button[type="submit"] {
+      border-radius: 0;
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 1rem 2.5rem;
+  }
+  ul {
+    margin: 3rem 0;
+    overflow: hidden;
+    padding-left: 1.5rem;
+  }
+
+  ul li {
+      margin-bottom: 1.5rem;
+  }
+
+  ul li a {
+      color: #000;
+      display: inline-block;
+      font-size: 1.4rem;
+      line-height: 133%;
+      text-decoration: none;
+      transition: all 0.3s;
+  }
+
+  ul li a:hover {
+      color: #fe4d82;
+  }
+
+  h5 {
+      font-size: 1.6rem;
+      font-family: 'Gotham-Bold', sans-serif;
+  }
+
+  .distance {
+      color: #fe4d82;
+      display: block;
+      font-family: 'Gotham-Bold', sans-serif;
+      font-size: 1.2rem;
+  }
+
+  .pagination {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      text-align: left;
+  }
+
+  .pagination a {
+      color: #000;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 1.5rem;
+  }
+
+  .pagination a:first-of-type {
+      margin-left: 0;
+  }
+
+  .pagination a:last-of-type {
+      margin-right: 0;
+  }
+
+  .pagination a:hover {
+      color: #fe4d82;
+      text-decoration: underline;
+  }
+}

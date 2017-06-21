@@ -14,6 +14,9 @@
 Route::get('/', 'ClientController@index');
 Route::get('/product/{id}', 'ClientController@showProduct');
 Route::get('/company/{id}', 'ClientController@showCompany');
+Route::get('/dispensary/{id}', 'ClientController@showDispensary');
+Route::get('/education', 'ClientController@education');
+Route::get('/dispensaries', 'ClientController@dispensaryIndex');
 
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
@@ -44,6 +47,7 @@ Route::get('/sync/products', 'ImportController@syncProducts')->middleware('admin
 Route::get('/sync/tags', 'ImportController@syncTags')->middleware('admin');
 Route::get('/sync/images', 'ImportController@syncImages')->middleware('admin');
 Route::get('/sync/companies', 'ImportController@syncCompanies')->middleware('admin');
+Route::get('/sync/dispensaries', 'ImportController@syncDispensaries')->middleware('admin');
 Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');
 Route::get('/sync/company/images', 'ImportController@companyImages')->middleware('admin');
 

@@ -1,0 +1,56 @@
+.dispensary-single {
+    display: block;
+    padding: 0 3rem;
+    width: 100%;
+
+  .dispensary-info {
+      font-size: 1.6rem;
+      line-height: 133%;
+      margin: 3rem 0;
+  }
+
+  .flex-container {
+      margin: 1.5rem 0;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .flex-container {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+      }
+  }
+
+  @media screen and (min-width: 60rem) {
+      .left-column {
+          width: 15%;
+      }
+  }
+
+  .featured-image {
+      margin: 1.5rem auto;
+      width: 100%;
+  }
+
+  @media screen and (min-width: 60rem) {
+      .featured-image {
+          margin: 0;
+      }
+  }
+
+  @media screen and (min-width: 60rem) {
+      .right-column {
+          padding: 0 3rem;
+          width: 75%;
+      }
+  }
+
+  .description {
+      margin: 1.5rem 0;
+  }
+
+  a {
+      color: #fe4d82;
+      text-decoration: none;
+  }
+}

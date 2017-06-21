@@ -24,6 +24,28 @@
                 </div>
             </div>
 
+            <div class="inventory-products">
+              <h5>Products from <span>{{ $company->name }}</span></h5>
+              <ul>
+
+                @foreach($products as $product)
+                    <li>
+                      <a href="/product/{{ $product->id }}">
+
+                        @if($product->image != "empty")
+                            <div class="product-image" style="background-image: url(https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/{{ $product->image }});"></div>
+                        @else
+                            <div class="logo"><img class="lips" src="/images/logo/logo-lips-black.svg"></div>
+                        @endif
+
+                        <span>{{ $product->name }}</span>
+                      </a>
+                    </li>
+                @endforeach
+
+              </ul>
+            </div>
+
         </div>
       </div>
     </div>

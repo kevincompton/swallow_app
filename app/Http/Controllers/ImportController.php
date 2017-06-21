@@ -9,6 +9,39 @@ use Storage;
 class ImportController extends Controller
 {
 
+    public function syncDispensaries()
+    {
+
+      $wpCompanies = \App\wpCompany::dispensaries()->get();
+      $wpIDs = DB::table('companies')->select('wordpress_id')->get();
+
+      foreach ($wpCompanies as $key => $wpCompany) {
+
+        if($wpIDs->contains('wordpress_id', $wpCompany->ID)) {
+          echo 'skipped company ' . $wpCompany->ID;
+        } else {
+
+          $company = new \App\Company;
+          $company->name = $wpCompany->post_title;
+          $company->category = "dispensary";
+          $company->website = $this->syncMeta('website', $wpCompany->ID);
+          $company->instagram = $this->syncMeta('instagram', $wpCompany->ID);
+          $company->description = $this->syncMeta('info', $wpCompany->ID);
+          $company->wordpress_id = $wpCompany->ID;
+          $company->address = $this->syncMeta('street_address', $wpCompany->ID);
+          $company->city = $this->syncMeta('city', $wpCompany->ID);
+          $company->state = $this->syncMeta('state', $wpCompany->ID);
+          $company->zip = $this->syncMeta('zip_code', $wpCompany->ID);
+          $company->phone = $this->syncMeta('phone_number', $wpCompany->ID);
+          $company->save();
+
+          echo "added company " . $wpCompany->ID;
+        }
+
+      }
+
+    }
+
     public function syncCompanies()
     {
       $wpCompanies = \App\wpCompany::companies()->get();
@@ -27,6 +60,11 @@ class ImportController extends Controller
           $company->instagram = $this->syncMeta('instagram', $wpCompany->ID);
           $company->description = $this->syncMeta('info', $wpCompany->ID);
           $company->wordpress_id = $wpCompany->ID;
+          $company->address = $this->syncMeta('street_address', $wpCompany->ID);
+          $company->city = $this->syncMeta('city', $wpCompany->ID);
+          $company->state = $this->syncMeta('state', $wpCompany->ID);
+          $company->zip = $this->syncMeta('zip_code', $wpCompany->ID);
+          $company->phone = $this->syncMeta('phone_number', $wpCompany->ID);
           $company->save();
 
           echo "added company " . $wpCompany->ID;

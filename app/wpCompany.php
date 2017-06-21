@@ -20,6 +20,11 @@ class wpCompany extends Model
         return $query->where('post_type', '=', 'company');
     }
 
+    public function scopeDispensaries($query)
+    {
+        return $query->where('post_type', '=', 'dispensary');
+    }
+
     public function products()
     {
         $products = DB::connection('wordpress')->table('wp_postmeta')

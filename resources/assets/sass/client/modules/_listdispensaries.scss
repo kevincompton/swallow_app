@@ -1,0 +1,66 @@
+.dispensary-list {
+    @media screen and (min-width: 60rem) {
+        width: 25%;
+    }
+
+    h5 {
+        font-family: 'Gotham-Medium';
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        overflow: hidden;
+    }
+
+    li {
+        font-size: 1.2rem;
+        line-height: 150%;
+        margin-bottom: 1.5rem;
+    }
+
+    li a {
+        text-decoration: none;
+    }
+
+    .title {
+        color: #fe4d82;
+        padding-left: 1.5rem;
+    }
+
+    .address {
+        border-left: 2px #cacaca solid;
+        color: #000;
+        padding-left: 1.5rem;
+        transition: all 0.3s;
+    }
+
+    li a:hover .address {
+        border-left: 2px #fe4d82 solid;
+    }
+
+    .pagination {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        text-align: left;
+    }
+
+    .pagination a {
+        color: #000;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 1.5rem;
+    }
+
+    .pagination a:first-of-type {
+        margin-left: 0;
+    }
+
+    .pagination a:last-of-type {
+        margin-right: 0;
+    }
+
+    .pagination a:hover {
+        color: #fe4d82;
+        text-decoration: underline;
+    }
+}
