@@ -8,7 +8,7 @@
     
     <div class="filter-container">
       <h3><hr><span>Select from the preferences below to<br>find the right edible for you</span><hr></h3>
-      {!! Form::open(['url' => '/products/filter/', 'method' => 'POST']) !!}
+      {!! Form::open(['url' => '/products/filter/', 'method' => 'GET']) !!}
           <div class="options">
               <div class="flex-container">
 

@@ -19,7 +19,7 @@ Route::get('/company/{id}', 'ClientController@showCompany');
 Route::get('/dispensary/{id}', 'ClientController@showDispensary');
 Route::get('/education', 'ClientController@education');
 Route::get('/dispensaries', 'ClientController@dispensaryIndex');
-Route::post('/products/filter', 'ClientController@results');
+Route::get('/products/filter', 'ClientController@results');
 
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
