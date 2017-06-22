@@ -41493,14 +41493,16 @@ if (filterProducts != null) {
       products: [],
       categories: [],
       selected: [],
-      paginate: ['products'],
       limit: 50,
       keywords: null
     },
 
-    mounted: function mounted() {
+    created: function created() {
       this.fetchProducts();
       this.fetchTags();
+    },
+    mounted: function mounted() {
+      this.setHomeFilters();
     },
 
 
@@ -41536,6 +41538,23 @@ if (filterProducts != null) {
     },
 
     methods: {
+
+      setHomeFilters: function setHomeFilters() {
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+
+        if (url.searchParams.get("search") != '') {
+          $('input.search').val(url.searchParams.get("search"));
+        }
+
+        var tags = url.searchParams.get("tags");
+        tags = tags.split(',');
+
+        for (var i = tags.length - 1; i >= 0; i--) {
+          $("[value=" + tags[i] + "]").prop('checked', true);
+          console.log($("[value=" + tags[i] + "]"));
+        }
+      },
 
       toggleTag: function toggleTag(tag) {
         var parent = this;

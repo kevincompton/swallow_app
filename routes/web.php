@@ -11,12 +11,15 @@
 |
 */
 
-Route::get('/', 'ClientController@index');
+// Client Routes
+Route::get('/', 'ClientController@welcome');
+Route::get('/edibles', 'ClientController@index');
 Route::get('/product/{id}', 'ClientController@showProduct');
 Route::get('/company/{id}', 'ClientController@showCompany');
 Route::get('/dispensary/{id}', 'ClientController@showDispensary');
 Route::get('/education', 'ClientController@education');
 Route::get('/dispensaries', 'ClientController@dispensaryIndex');
+Route::post('/products/filter', 'ClientController@results');
 
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
@@ -45,7 +48,6 @@ Route::get('/admin', 'AdminController@index')->middleware('admin');
 Route::get('/approve/{id}', 'AdminController@approve')->middleware('admin');
 Route::get('/sync/products', 'ImportController@syncProducts')->middleware('admin');
 Route::get('/sync/tags', 'ImportController@syncTags')->middleware('admin');
-Route::get('/sync/images', 'ImportController@syncImages')->middleware('admin');
 Route::get('/sync/companies', 'ImportController@syncCompanies')->middleware('admin');
 Route::get('/sync/dispensaries', 'ImportController@syncDispensaries')->middleware('admin');
 Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');

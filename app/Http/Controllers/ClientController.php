@@ -8,6 +8,33 @@ use Storage;
 class ClientController extends Controller
 {
     
+    public function welcome()
+    {
+      $categories = \App\Category::all();
+
+      $data = [
+        "categories" => $categories
+      ];
+
+      return view('client.welcome')->with($data);
+    }
+
+    public function results(Request $request)
+    {
+      $inputs = $request->all();
+
+      if(isset($inputs["search"])) {
+        $search = $inputs["search"];
+      } else {
+        $search = null;
+      }
+      
+      unset($inputs["search"]);
+      unset($inputs["_token"]);
+
+      return redirect('/edibles?tags=' . implode(",",$inputs) . '&search=' . $search);
+    }
+
     public function index()
     {
 

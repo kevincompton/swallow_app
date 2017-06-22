@@ -1,0 +1,231 @@
+.homepage-wrapper {
+    .hero {
+        overflow: hidden;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+        position: relative;
+    }
+
+    .hero .slide-bg {
+        background-size: cover;
+        background-position: center;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .hero .slide-bg:after {
+        background: rgba(255,255,255,0.3);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .hero .slide-bg {
+            background-attachment: fixed;
+        }
+    }
+
+    h2 {
+        color: #000;
+        font-family: 'Gotham-Bold', sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.05em;
+        line-height: 133%;
+        margin: 0 auto 3rem;
+        padding-top: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 90%;
+    }
+
+    @media screen and (min-width: 60rem) {
+        h2 {
+            font-size: 3.6rem;
+            padding-top: 4rem;
+            width: 60%;
+        }
+    }
+
+    .mailchimp {
+        background: #F7F7F7;
+        padding: 6rem 0;
+        text-align: center;
+    }
+
+    .instagram-feed {
+        padding: 6rem 0;
+        text-align: center;
+    }
+    .filter-container {
+        background: rgba(255,255,255,0.95);
+        border: 2px #000 solid;
+        display: block;
+        margin: 0 auto;
+        padding: 1.5rem;
+        text-align: center;
+        width: 90%;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .filter-container {
+            padding: 1.5rem 3rem;
+            width: 60%;
+        }
+    }
+
+    h3 {
+        align-items: center;
+        display: flex;
+        font-size: 1.4rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 60rem) {
+        h3 {
+            font-size: 2.4rem;
+        }
+    }
+
+    h3 hr {
+        background: #000;
+        border: 0;
+        flex: 1;
+        height: 2px;
+        width: auto;
+    }
+
+    h3 span {
+        padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        h3 span {
+            padding: 0 3rem;
+        }
+    }
+
+    .options {
+        margin: .5rem 0 0;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .options {
+            margin: 1.5rem 0 0;
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .options .column {
+        padding: .5rem;
+        width: 50%;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .options .column {
+            width: 25%;
+        }
+    }
+
+    .options .column:last-of-type {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 60rem) {
+        .options .column:last-of-type {
+            width: 50%;
+        }
+    }
+
+    .options .column:last-of-type ul {
+        columns: 2;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        h4 {
+            font-size: 1.8rem;
+        }
+    }
+
+    li {
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
+
+    @media screen and (min-width: 60rem) {
+        li {
+            font-size: 1.6rem;
+        }
+    }
+
+    li a {
+        cursor: pointer;
+    }
+
+    li a.selected {
+        color:#fe4d82;
+    }
+
+    li a.selected input[type="checkbox"] {
+        background:#fe4d82;
+    }
+
+    input[type="checkbox"] {
+        border-radius: 50%;
+        border: 1px #000 solid;
+        display: inline-block;
+        height: 1rem;
+        margin-right: 0.75rem;
+        vertical-align: middle;
+        width: 1rem;
+    }
+
+    .input-zip-code {
+        margin: .75rem 0;
+        text-align: center;
+    }
+
+    input[type="number"] {
+      border: 1px #cacaca solid;
+      color: #000;
+      font-size: 1.4rem;
+      letter-spacing: 0.02rem;
+      padding: .5rem 1rem;
+      -webkit-appearance: none;
+      width: auto;
+    }
+
+    input[type="number"]::-webkit-input-placeholder {
+        color: #cacaca;
+    }
+
+    input[type="number"]::-moz-placeholder {
+        color: #cacaca;
+    }
+
+    input[type="number"]:-ms-input-placeholder {
+        color: #cacaca;
+    }
+
+    input[type="number"]:-moz-placeholder {
+        color: #cacaca;
+    }
+}

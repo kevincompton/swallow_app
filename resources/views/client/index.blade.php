@@ -23,7 +23,7 @@
       <main>
         <input
           v-model="keywords"
-          class="form-control input-lg"
+          class="form-control input-lg search"
           placeholder="Search products..."
         >
 

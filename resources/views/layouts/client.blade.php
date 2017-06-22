@@ -26,6 +26,7 @@
         </a>
 
         <nav class="desktop-menu">
+          <a href="/edibles">Edible Directory</a>
           <a href="/education">Edible Education</a>
           <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
           <a href="/dispensaries">Dispensaries</a>
