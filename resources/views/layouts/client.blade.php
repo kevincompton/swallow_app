@@ -43,9 +43,10 @@
 
           <nav class="mobile-nav">
             <a href="/">Home</a>
-            <a href="#">Edible Education</a>
+            <a href="/edibles">Edible Directory</a>
+            <a href="/education">Edible Education</a>
             <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
-            <a href="#">Dispensaries</a>
+            <a href="/dispensaries">Dispensaries</a>
           </nav>
         </div>
       </div>

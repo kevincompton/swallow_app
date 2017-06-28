@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"background",
+				"background-image"
+			],
+			[
+				"dispe",
+				"dispensaries"
+			],
+			[
+				"wordpress",
+				"wordpress_id"
+			],
+			[
+				"sync",
+				"syncMeta"
+			],
+			[
+				"attach",
+				"attachProducts"
+			],
+			[
+				"wp",
+				"wpCompany"
+			],
+			[
 				"dea",
 				"deactivate"
 			],
@@ -124,10 +148,6 @@
 				"lowercase"
 			],
 			[
-				"background",
-				"background-position"
-			],
-			[
 				"product",
 				"productView"
 			],
@@ -200,10 +220,19 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/layouts/client.blade.php",
+			"file": "app/Http/Controllers/ClientController.php",
 			"settings":
 			{
-				"buffer_size": 1746,
+				"buffer_size": 3281,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/js/client.js",
+			"settings":
+			{
+				"buffer_size": 2803,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -212,42 +241,60 @@
 			"file": "resources/views/client/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 1100,
+				"buffer_size": 1863,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/assets/js/app.js",
+			"file": "resources/views/client/welcome.blade.php",
 			"settings":
 			{
-				"buffer_size": 7935,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/sass/app.scss",
-			"settings":
-			{
-				"buffer_size": 505,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/sass/client.scss",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 1736,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/css/client.css",
+			"file": "resources/views/client/education.blade.php",
 			"settings":
 			{
-				"buffer_size": 8986,
+				"buffer_size": 8724,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/sass/client/modules/_listproduct.scss",
+			"settings":
+			{
+				"buffer_size": 2152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/sass/client/_junkdrawer.scss",
+			"settings":
+			{
+				"buffer_size": 1823,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 2796,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".env",
+			"settings":
+			{
+				"buffer_size": 851,
 				"line_ending": "Unix"
 			}
 		}
@@ -259,10 +306,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 270.0,
-		"last_filter": "set bla",
+		"height": 400.0,
+		"last_filter": "set sass",
 		"selected_items":
 		[
+			[
+				"set sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"set sas",
+				"Set Syntax: Sass"
+			],
 			[
 				"set bla",
 				"Set Syntax: Laravel Blade"
@@ -273,10 +328,6 @@
 			],
 			[
 				"syntax sa",
-				"Set Syntax: Sass"
-			],
-			[
-				"set sass",
 				"Set Syntax: Sass"
 			],
 			[
@@ -332,61 +383,81 @@
 		"/Users/kevincompton/Sites/swallow-partners",
 		"/Users/kevincompton/Sites/swallow-partners/app",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers",
 		"/Users/kevincompton/Sites/swallow-partners/config",
-		"/Users/kevincompton/Sites/swallow-partners/public",
-		"/Users/kevincompton/Sites/swallow-partners/public/css",
 		"/Users/kevincompton/Sites/swallow-partners/resources",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/home",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts",
 		"/Users/kevincompton/Sites/swallow-partners/routes"
 	],
 	"file_history":
 	[
-		"/Users/kevincompton/Sites/swallow-partners/public/css/app.css",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ImportController.php",
-		"/Users/kevincompton/Sites/swallow-partners/routes/web.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/client.js",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/index.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/routes/web.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_home.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/welcome.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_product.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_company.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ClientController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/client.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/composer.json",
-		"/Users/kevincompton/Sites/swallow-partners/config/filesystems.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Product.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ImportController.php",
 		"/Users/kevincompton/Sites/swallow-partners/.env",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/register.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/APIController.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/dispensary_index.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_dispensaryindex.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_dispensary.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_footer.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_education.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_relatedproducts.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/education.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_dispensary.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_product.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_companyinventory.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_company.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_sidenav.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_header.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_junkdrawer.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_listdispensaries.scss",
+		"/Users/kevincompton/Sites/swallow-partners/app/wpCompany.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_listproduct.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_20_184124_product_meta.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_21_182101_company_nullable_2.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_21_181731_company_nullable.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_21_175940_company_product_user_cleanup.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/User.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_21_105445_company_wp.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/dispensaries.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Autocomplete.vue",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Filterable.vue",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_reset.scss",
+		"/Users/kevincompton/Sites/swallow-partners/public/css/client.css",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_header.scss.haml",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/app.scss",
+		"/Users/kevincompton/Sites/swallow-partners/webpack.mix.js",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/APIController.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/HomeController.php",
+		"/Users/kevincompton/Sites/swallow-partners/public/css/app.css",
+		"/Users/kevincompton/Sites/swallow-partners/composer.json",
+		"/Users/kevincompton/Sites/swallow-partners/config/filesystems.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/register.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Filterable.vue",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/AdminController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/app.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Product.php",
-		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_20_184124_product_meta.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Category.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_20_173139_create_tags_table.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Tag.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_20_174455_tag_wp_id.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/edibles.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_18_223627_company_logo.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/User.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_18_212413_user_company.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_18_211442_create_companies_table.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/admin.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/app.scss",
-		"/Users/kevincompton/Sites/swallow-partners/app/wpCompany.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth/RegisterController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/welcome.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/wpMeta.php",
-		"/Users/kevincompton/Sites/swallow-partners/webpack.mix.js",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/products/edit.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_05_30_223846_deactivate.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ProductController.php",
@@ -447,37 +518,7 @@
 		"/Users/kevincompton/Sites/inkkas-production/assets/styles.scss.liquid",
 		"/Users/kevincompton/Sites/inkkas-production/snippets/filtered-products.liquid",
 		"/Users/kevincompton/Sites/inkkas-production/snippets/filtered-products-select.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/assets/filter.js",
-		"/Users/kevincompton/Sites/inkkas-production/templates/collection.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/snippets/product-loop.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/snippets/collection-loop.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/templates/collection.json_tags.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/templates/collection.json.liquid",
-		"/Users/kevincompton/Sites/inkkas-production/assets/vue-animated-list.js",
-		"/Users/kevincompton/Sites/inkkas-production/assets/vue.min.js",
-		"/Users/kevincompton/Sites/inkkas-production/config.yml",
-		"/Users/kevincompton/Sites/inkkas/css/sass/inc/typeplate/_typeplate.scss",
-		"/Users/kevincompton/Sites/inkkas/css/sass/_collection.scss",
-		"/Users/kevincompton/Sites/inkkas/gruntfile.js",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/js/app.js",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/js/modules/_card.js",
-		"/Users/kevincompton/Sites/Nutra.io/routes/api.php",
-		"/Users/kevincompton/Sites/Nutra.io/routes/web.php",
-		"/Users/kevincompton/Sites/Nutra.io/app/Http/Controllers/DoseController.php",
-		"/Users/kevincompton/Sites/Nutra.io/app/Http/Controllers/HomeController.php",
-		"/Users/kevincompton/Sites/Nutra.io/resources/views/home.blade.php",
-		"/Users/kevincompton/Sites/Nutra.io/app/Dose.php",
-		"/Users/kevincompton/Sites/Nutra.io/app/Tag.php",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/sass/global/_typography.scss",
-		"/Users/kevincompton/Sites/Nutra.io/resources/views/layouts/app.blade.php",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/sass/app.scss",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/sass/global/_layout.scss",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/sass/modules/_badges.scss",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/js/vendor/moment.js",
-		"/Users/kevincompton/Sites/Nutra.io/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss",
-		"/Users/kevincompton/Sites/Nutra.io/node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss",
-		"/Users/kevincompton/Sites/Nutra.io/storage/framework/views/01e11ae0da630ad207abf538209d0385f323162c.php",
-		"/Users/kevincompton/Sites/Nutra.io/resources/assets/sass/modules/_cards.scss"
+		"/Users/kevincompton/Sites/inkkas-production/assets/filter.js"
 	],
 	"find":
 	{
@@ -496,6 +537,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/assets",
+			"=\"/",
+			"\">",
+			"flex-dire",
+			".logo",
+			"main",
 			"label",
 			"checkbox",
 			"/assets",
@@ -551,54 +598,114 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/layouts/client.blade.php",
+					"file": "app/Http/Controllers/ClientController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1746,
+						"buffer_size": 3281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								361,
-								361
+								675,
+								675
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/client/index.blade.php",
+					"file": "resources/assets/js/client.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1100,
+						"buffer_size": 2803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								576,
-								576
+								1537,
+								1537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 774.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/client/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								718,
+								746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/client/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								588,
+								588
 							]
 						],
 						"settings":
@@ -615,12 +722,42 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "resources/assets/js/app.js",
+					"buffer": 4,
+					"file": "resources/views/client/education.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7935,
+						"buffer_size": 8724,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8703,
+								8703
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1688.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "resources/assets/sass/client/modules/_listproduct.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2152,
 						"regions":
 						{
 						},
@@ -633,7 +770,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -641,29 +778,59 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "resources/assets/sass/app.scss",
+					"buffer": 6,
+					"file": "resources/assets/sass/client/_junkdrawer.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 505,
+						"buffer_size": 1823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								856,
+								856
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 606.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								824,
+								824
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -673,12 +840,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "resources/assets/sass/client.scss",
+					"buffer": 8,
+					"file": ".env",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 851,
 						"regions":
 						{
 						},
@@ -691,43 +858,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/css/client.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								376,
-								381
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7754.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -902,7 +1039,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 306.0,
+	"side_bar_width": 272.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

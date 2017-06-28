@@ -136,3 +136,8 @@ if(filterProducts != null){
 
 }
 
+
+$('a.menu-button').on('click', function() {
+  $('nav.mobile-nav').toggleClass('active');
+});
+
