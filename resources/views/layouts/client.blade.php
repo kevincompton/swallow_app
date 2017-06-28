@@ -10,6 +10,8 @@
 
     <title>Swallow.la</title>
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/client.css') }}" rel="stylesheet">
 </head>

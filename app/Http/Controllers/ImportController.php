@@ -42,6 +42,22 @@ class ImportController extends Controller
 
     }
 
+    public function syncLocations()
+    {
+      $dispensaries = \App\Company::dispensaries()->get();
+
+      foreach ($dispensaries as $key => $dispensary) {
+        if($this->syncMeta('latitude', $dispensary->wordpress_id) != null) {
+          $dispensary->latitude = $this->syncMeta('latitude', $dispensary->wordpress_id);
+          $dispensary->longitude = $this->syncMeta('longitude', $dispensary->wordpress_id);
+          $dispensary->save();
+        }
+      }
+
+      return 'done';
+
+    }
+
     public function syncCompanies()
     {
       $wpCompanies = \App\wpCompany::companies()->get();
@@ -203,7 +219,7 @@ class ImportController extends Controller
       if(isset($this->fetchMeta($handle, $wp_id)->first()->meta_value)) {
         return $this->fetchMeta($handle, $wp_id)->first()->meta_value;
       } else {
-        return 'empty';
+        return '';
       }
     }
 

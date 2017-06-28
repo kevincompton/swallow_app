@@ -9,11 +9,12 @@ use DB;
 class APIController extends Controller
 {
 
+
+
   public function fetchProducts()
   {
+
     $products = \App\Product::all();
-
-
 
     foreach ($products as $key => $product) {
       if($product->users()->first()) {

@@ -17,12 +17,14 @@ if(filterProducts != null){
       categories: [],
       selected: [],
       limit: 50,
-      keywords: null
+      keywords: null,
+      latitude: 34.060165,
+      longitude: -118.274480
     },
 
     created() {
-      this.fetchProducts();
       this.fetchTags();
+      this.setLocation();
     },
 
     mounted() {
@@ -75,11 +77,11 @@ if(filterProducts != null){
         }
         
         var tags = url.searchParams.get("tags");
-        tags = tags.split(',');
-
-        for (var i = tags.length - 1; i >= 0; i--) {
-          $("[value=" + tags[i] + "]").prop('checked', true);
-          console.log($("[value=" + tags[i] + "]"));
+        if(tags != null) {
+          tags = tags.split(',');
+          for (var i = tags.length - 1; i >= 0; i--) {
+            $("[value=" + tags[i] + "]").prop('checked', true);
+          }
         }
 
       },
@@ -96,12 +98,26 @@ if(filterProducts != null){
 
       },
 
+      setLocation: function() {
+        var parent = this;
+
+        navigator.geolocation.getCurrentPosition(function(location) {
+          parent.latitude = location.coords.latitude;
+          parent.longitude = location.coords.longitude;
+        });
+
+        this.fetchProducts();
+
+      },
+
       fetchProducts: function() {
         var parent = this;
 
+        console.log('fetch products');
+
         $.ajax({
           type:'GET',
-          url: '/client/products',
+          url: '/client/products?latitude=' + parent.latitude + '&longitude=' + parent.longitude,
           dataType: 'json',
           async: false,
           success : function(data) {
@@ -110,6 +126,7 @@ if(filterProducts != null){
 
           }
         });
+
 
       },
 

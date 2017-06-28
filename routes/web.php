@@ -52,6 +52,7 @@ Route::get('/sync/companies', 'ImportController@syncCompanies')->middleware('adm
 Route::get('/sync/dispensaries', 'ImportController@syncDispensaries')->middleware('admin');
 Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');
 Route::get('/sync/company/images', 'ImportController@companyImages')->middleware('admin');
+Route::get('/sync/locations', 'ImportController@syncLocations')->middleware('admin');
 
 // internal API
 Route::get('/products', 'APIController@fetchProducts');
@@ -63,3 +64,4 @@ Route::get('/wp/products/{company}', 'APIController@wpProducts');
 
 // Test Routes
 
+Route::get('/test/location', "APIController@locationRadius");
