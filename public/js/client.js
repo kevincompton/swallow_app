@@ -41516,7 +41516,7 @@ if (filterProducts != null) {
         if (this.keywords != null && this.keywords.length > 0) {
           var re = new RegExp(parent.keywords, 'i');
           return parent.products.filter(function (o) {
-            return o.name.match(re);
+            return o.full_name.match(re);
           });
         }
 

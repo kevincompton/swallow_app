@@ -38,7 +38,7 @@ if(filterProducts != null){
 
         if(this.keywords != null && this.keywords.length > 0) {
           const re = new RegExp(parent.keywords, 'i');
-          return parent.products.filter(o => o.name.match(re));
+          return parent.products.filter(o => o.full_name.match(re));
         }
 
         return parent.products.filter(function (product) {

@@ -117,6 +117,12 @@ class ClientController extends Controller
 
       foreach ($products as $key => $product) {
         $product->tags = $product->tags()->get();
+        $brand = \App\Company::find($product->brand_id);
+        if($brand != null){
+          $product->full_name = $brand->name . ' ' . $product->name;
+        } else {
+          $product->full_name = $product->name;
+        }
         $product->s3_image = 'https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/' . $product->image;
       }
 

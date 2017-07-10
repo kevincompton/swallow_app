@@ -53,6 +53,7 @@ Route::get('/sync/dispensaries', 'ImportController@syncDispensaries')->middlewar
 Route::get('/attach/products', 'ImportController@attachProducts')->middleware('admin');
 Route::get('/sync/company/images', 'ImportController@companyImages')->middleware('admin');
 Route::get('/sync/locations', 'ImportController@syncLocations')->middleware('admin');
+Route::get('/sync/brands', 'ImportController@syncBrands')->middleware('admin');
 
 // internal API
 Route::get('/products', 'APIController@fetchProducts');

@@ -9,6 +9,26 @@ use Storage;
 class ImportController extends Controller
 {
 
+    public function syncBrands()
+    {
+      $products = \App\Product::all();
+
+      foreach ($products as $key => $product) {
+        $wp_id = (int)$this->syncMeta('company', $product->wordpress_id);
+        if($wp_id > 0) {
+          if(\App\Company::where('wordpress_id', $wp_id)->first() != null) {
+            $product->brand_id = \App\Company::where('wordpress_id', $wp_id)->first()->id;
+          }
+        } else {
+          $product->brand_id = 0;
+        }
+        $product->save();
+      }
+
+      return "done";
+
+    }
+
     public function syncDispensaries()
     {
 
