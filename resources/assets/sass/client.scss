@@ -1,33 +1,21 @@
-
-
 @import "/client/_reset";
 
-
-@font-face {
-  font-family: 'Gotham-Light';
-  src:  url('/fonts/gotham-light.woff2') format('woff2'),
-        url('/fonts/gotham-light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Gotham-Book';
-  src:  url('/fonts/gotham-book.woff2') format('woff2'),
-        url('/fonts/gotham-book.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Gotham-Medium';
-  src:  url('/fonts/gotham-medium.woff2') format('woff2'),
-        url('/fonts/gotham-medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Gotham-Bold';
-  src:  url('/fonts/gotham-bold.woff2') format('woff2'),
-        url('/fonts/gotham-bold.woff') format('woff');
-}
+@import "/client/global/_typography";
 
 @import "/client/_junkdrawer";
+
+body {
+  background: #000a20;
+  .client-wrapper {
+    background-color: #f3f4f5;
+  }
+}
+.clear {
+  clear:both;
+}
+hr {
+  border: none;
+}
 
 // Layout
 @import "/client/layout/_sidenav";
@@ -35,14 +23,17 @@
 @import "/client/layout/_footer"; 
 
 .client-wrapper {
-  padding-top: 5.5rem;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 80px;
 }
+
 
 // Transitions
 .list-enter-active, .list-leave-active {
   transition: all 1s;
 }
-.list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+.list-enter, .list-leave-to {
   opacity: 0;
   transform: translateY(30px);
 } 
@@ -78,6 +69,7 @@
 @import "/client/modules/_education";
 @import "/client/modules/_dispensaryindex";
 @import "/client/modules/_home";
+@import "/modules/_age-gate";
 
 
 

@@ -7,6 +7,58 @@ Vue.component('autocomplete-input', require('./components/Autocomplete.vue'));
 
 var filterProducts = document.getElementById('filterable');
 
+var agegate = document.getElementById('age-gate');
+
+if(agegate != null){
+
+  const agegate = new Vue({
+    el: '#age-gate',
+    data: {
+      show: false,
+      deny: false
+    },
+
+    mounted() {
+
+      console.log('age gate');
+      this.gateInit();
+
+    },
+
+    methods: {
+
+      gateInit: function() {
+
+        this.show = true;
+
+      },
+
+      confirm: function() {
+
+        this.show = false;
+
+        $.ajax({
+          type:'GET',
+          url: '/confirm/age',
+          dataType: 'json',
+          async: false,
+          success : function(data) {}
+        });
+
+      },
+
+      cancel: function() {
+
+        this.deny = true;
+
+      },
+
+    },
+
+  });
+
+}
+
 if(filterProducts != null){
 
   const filterable = new Vue({

@@ -79,8 +79,8 @@ strong {
 }
 
 button[type="submit"], .read-more {
-  background: #fe4d82;
-  border: 3px #fe4d82 solid;
+  background: #fa3668;
+  border: 3px #fa3668 solid;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -94,16 +94,4 @@ button[type="submit"], .read-more {
   text-transform: uppercase;
   -webkit-appearance: none;
   z-index: 1;
-}
-
-button[type="submit"]:after, .read-more:after {
-  background: #fff;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: all .3s;
-  width: 0;
-  z-index: -1;
 }

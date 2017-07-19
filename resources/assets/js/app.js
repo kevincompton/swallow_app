@@ -7,8 +7,6 @@ Vue.component('autocomplete-input', require('./components/Autocomplete.vue'));
 var onboard = document.getElementById('onboard-autocomplete');
 var autocomplete = document.getElementById('autocomplete');
 
-
-
 if(onboard != null){
 
   const app2 = new Vue({

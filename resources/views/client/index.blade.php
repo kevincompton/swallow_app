@@ -1,32 +1,40 @@
 @extends('layouts.client')
 
+@section('body_class', 'body__products')
+
 @section('content')
 
   <span id="filterable">
-    <div class="flex-container client-wrapper">
+    <div class="search-wrapper">
 
-      <aside class="sidenav">
-        <div class="sidenav-wrapper">
-          <div class="category" v-for="category in categories">
-            <h4>@{{ category.title }}</h4>
-
-            <div v-for="tag in category.tags" class="form-check">
-              <label class="form-check-label">
-                <input v-on:click="toggleTag(tag)" type="checkbox" class="form-check-input" :value="tag.id">
-                @{{ tag.title }}
-              </label>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <main>
+      <div class="search-input">
         <input
+          id="keywords"
+          name="keywords"
           v-model="keywords"
           class="form-control input-lg search"
           placeholder="Search products..."
         >
+        <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
 
+      <div class="category dropdown" v-for="category in categories">
+        <h4>@{{ category.title }}</h4>
+
+        <div v-for="tag in category.tags" class="form-check">
+          <label class="form-check-label">
+            <input v-on:click="toggleTag(tag)" type="checkbox" class="form-check-input" :value="tag.id">
+            @{{ tag.title }}
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex-container client-wrapper">
+      <main>
+      <h3>Edibles Directory</h3>
         <section id="product-list">
           <transition-group name="list">
             <div class="product" v-for="(product, index) in filteredProducts" v-bind:key="product" v-if="index < limit">

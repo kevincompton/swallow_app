@@ -1,29 +1,28 @@
 @extends('layouts.client')
 
+@section('body_class', 'body__product')
+
 @section('content')
 
 <div class="flex-container client-wrapper">
   <div class="product-single">
     <div class="flex-container">
         <div class="product">
-            <h3>{{ $product->name }}</h3>
-            <div class="tags">
-              @foreach($product->tags()->get() as $tag)
-                <span>{{ $tag->title }}</span>
-              @endforeach
-            </div>
+
+            <ul class="breadcrumbs">
+                <li><a href="/edibles"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to Directory</a> / </li>
+                <li>{{ $product->name }}</li>
+            </ul>
 
             <div class="product-info">
                 <div class="images">
                     <div class="featured-image">
                         <img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/{{ $product->image }}">
                     </div>
-                    <div class="other-images">
-                        
-                    </div>
                 </div><!-- end images -->
 
                 <div class="copy">
+                    <h3>{{ $product->name }}</h3>
                     <div class="meta">
                         <div><strong>Ingredients:</strong> <span>{{ $product->ingredients }}</span></div>
                         <div><strong>Strength:</strong> <span>{{ $product->strength }}</span></div>
@@ -31,6 +30,11 @@
                     <div class="description">
                         <strong>Description</strong>
                         <div>{{ $product->description }}</div>
+                    </div>
+                    <div class="tags">
+                      @foreach($product->tags()->get() as $tag)
+                        <span>{{ $tag->title }}</span>
+                      @endforeach
                     </div>
                 </div><!-- end info -->
             </div>

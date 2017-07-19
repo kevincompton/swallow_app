@@ -1,8 +1,115 @@
+$wrapper-margin: 15%;
+
+// Search and Filters
+.search-wrapper {
+  background: #f3f4f5;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  max-width: 1400px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.25);
+  z-index: 999;
+  .category {
+    display: none;
+  }
+  .search-input {
+    width: 50%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    position: relative;
+    border-radius: 100px;
+    overflow: hidden;
+    height: 50px;
+    border: solid 1px #cbcccd;
+    background: white;
+    input {
+        border-radius: 100px;
+        border: none;
+        background: transparent;
+    }
+  }
+  button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            line-height: 40px;
+            font-size: 24px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            &.filter {
+                background: transparent;
+                border: none;
+                border-left: #ccc 1px solid;
+                font-weight: bold;
+                font-size: 14px;
+                padding: 0 1.5rem;
+                right: 7rem;
+                line-height: 46px;
+                padding-left: 30px;
+                i {
+                    margin-left: 5px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 18px;
+                    background: url('/images/redesign/icon-filters.svg');
+                    background-size: cover;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+}
+
 header#client-header {
-    left: 0;
+    padding-left: 80px;
+  padding-right: 80px;
+    margin: auto;
     position: fixed;
+    background: #000920;
     right: 0;
-    z-index: 1000;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    max-width: 1400px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    ul.tools {
+        color: rgba(275,275,275,0.75);
+        text-align: right;
+        position: absolute;
+        top: 15px;
+        right: 80px;
+        margin: 0rem 0.8rem;
+        font-weight: 500;
+        a {
+            color: rgba(275,275,275,0.65);
+        }
+        li {
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 3px;
+            &.spacer {
+                margin: 0 15px;
+            }
+        }
+    }
+
+    nav {
+        margin-top: 25px;
+    }
 
     .logo {
         align-items: center;
@@ -14,15 +121,12 @@ header#client-header {
     }
 
     .logo img {
-        height: auto;
-        width: 50%;
         float: left;
+        width: auto;
     }
 
     .container {
         align-items: center;
-        background: rgba(255,255,255,1);   
-        box-shadow: 0 0 5px rgba(0,0,0,.3);
         display: flex;
         font-size: 100%;
         justify-content: space-between;
@@ -31,7 +135,7 @@ header#client-header {
 
     @media screen and (min-width: 60rem) {
         .container {
-            padding: 1.5rem 3rem;
+            padding: 1.5rem 0rem;
         }
     }
 
@@ -44,13 +148,11 @@ header#client-header {
     .logo .lips {
         height: auto;
         margin-right: 0.5rem;
-        width: 5rem;
     }
 
     @media screen and (min-width: 60rem) {
         .logo .lips {
             margin-right: 1.5rem;
-            width: 7.9rem;
         }
     }
 
@@ -72,7 +174,7 @@ header#client-header {
 
     .beta {
         color: #000;
-        font-family: 'Gotham-Medium', sans-serif;
+        
         font-size: 1rem;
         margin-left: 0.75rem;
         position: relative;
@@ -93,18 +195,24 @@ header#client-header {
         text-align: right;
     }
 
-    @media screen and (min-width: 768px) {
+    .tools {
+        display: none;
+    }
+
+    @media screen and (min-width: 962px) {
         .desktop-menu {
             display: inline-block;
+        }
+        .tools {
+            display: block;
         }
     }
 
     .desktop-menu a {
-        color: #000;
+        color: #fff;
         display: inline-block;
-        font-family: 'Gotham-Bold', sans-serif;
-        font-size: 1.4em;
-        letter-spacing: 0.01em;
+        font-weight: 600;
+        font-size: 1.6em;
         margin: 0.5rem 1rem;
         position: relative;
         text-decoration: none;
@@ -148,7 +256,7 @@ header#client-header {
         display: flex;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 962px) {
         .mobile-menu {
             display: none;
         }
@@ -167,7 +275,7 @@ header#client-header {
     }
 
     .menu-icon span {
-        background: #000;
+        background: #fff;
         display: inline-block;
         height: .3rem;
         left: 0;

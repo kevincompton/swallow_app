@@ -9,7 +9,7 @@ use DB;
 class ClientController extends Controller
 {
     
-    public function welcome()
+    public function welcome(Request $request)
     {
       $categories = \App\Category::all();
 
@@ -18,6 +18,13 @@ class ClientController extends Controller
       ];
 
       return view('client.welcome')->with($data);
+    }
+
+    public function confirmAge()
+    {
+      return response('confirmed')->cookie(
+        'age', 'confirmed', 9999
+      );
     }
 
     public function results(Request $request)

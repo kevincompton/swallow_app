@@ -11,27 +11,34 @@
     <title>Swallow.la</title>
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://use.fontawesome.com/e6f27715c0.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/client.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="@yield('body_class')">
 
     <header id="client-header">
       <div class="header container">
+
+        <ul class="tools">
+          <li>FOLLOW US</li>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="spacer">|</li>
+          <li><a href="#">SIGN IN / SIGNUP</a></li>
+        </ul>
+
         <a class="logo" href="/">
-          <img class="lips" src="/images/logo/logo-lips-black.svg">
-          <div class="words">
-            <img class="text" src="/images/logo/logo-text.svg">
-            <span class="beta">BETA</span>
-          </div>
+          <img class="lips" src="/images/logo/logo-header.png">
         </a>
 
         <nav class="desktop-menu">
-          <a href="/edibles">Edible Directory</a>
-          <a href="/education">Edible Education</a>
-          <a href="http://blog.swallow.la" target="_blank" routerLinkActive="active">Blog</a>
+          <a href="#">About</a>
+          <a href="/edibles">Directory</a>
           <a href="/dispensaries">Dispensaries</a>
+          <a href="http://blog.swallow.la" target="_blank">News & Reviews</a>     
         </nav>
 
         <div class="mobile-menu">
@@ -54,8 +61,44 @@
       </div>
     </header>
 
-    
     @yield('content')
+
+    <section class="partners">
+      <div style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)">
+        <h2>List your edible in Swallow's directory</h2>
+        <a class="btn">ADD YOUR EDIBLES</a>
+      </div>
+      <div style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)">
+        <h2>Add your dispensary to our directory</h2>
+        <a class="btn">ADD YOUR DISPENSARY</a>
+      </div>
+      <hr class="clear">
+    </section>
+
+    <nav class="footer-primary">
+      <ul>
+        <li>Who Are We</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Submit Edible</a></li>
+        <li><a href="#">Submit Dispensary</a></li>
+      </ul>
+      <ul>
+        <li>Categories</li>
+        <li><a href="#">Dietary</a></li>
+        <li><a href="#">Breeds</a></li>
+        <li><a href="#">Types</a></li>
+        <li><a href="#">Dispensaries</a></li>
+      </ul>
+      <ul>
+        <li>Follow Us</li>
+        <li><a href="https://www.facebook.com/worldslargestedibledirectory" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/swallowla" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/swallow.la/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+
+      <hr class="clear">
+    </nav>
 
     <div class="footer container">
       <div class="row">
@@ -69,11 +112,6 @@
         <div class="copyright">
           ©2017 Swallow. All Rights Reserved.
         </div>
-        <nav class="social-nav">
-          <a href="https://www.facebook.com/worldslargestedibledirectory" target="_blank"><img src="/images/icons/facebook-icon.svg"></a>
-          <a href="https://twitter.com/swallowla" target="_blank"><img src="/images/icons/twitter-icon.svg"></a>
-          <a href="https://www.instagram.com/swallow.la/" target="_blank"><img src="/images/icons/instagram-icon.svg"></a>
-        </nav>
       </div>
     </div>   
 

@@ -24,6 +24,7 @@ Route::get('/products/filter', 'ClientController@results');
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
 Route::get('/client/tags', 'ClientController@fetchTags');
+Route::get('/confirm/age', 'ClientController@confirmAge');
 
 Auth::routes();
 

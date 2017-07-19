@@ -41484,6 +41484,54 @@ Vue.component('autocomplete-input', __webpack_require__(34));
 
 var filterProducts = document.getElementById('filterable');
 
+var agegate = document.getElementById('age-gate');
+
+if (agegate != null) {
+
+  var _agegate = new Vue({
+    el: '#age-gate',
+    data: {
+      show: false,
+      deny: false
+    },
+
+    mounted: function mounted() {
+
+      console.log('age gate');
+      this.gateInit();
+    },
+
+
+    methods: {
+
+      gateInit: function gateInit() {
+
+        this.show = true;
+      },
+
+      confirm: function confirm() {
+
+        this.show = false;
+
+        $.ajax({
+          type: 'GET',
+          url: '/confirm/age',
+          dataType: 'json',
+          async: false,
+          success: function success(data) {}
+        });
+      },
+
+      cancel: function cancel() {
+
+        this.deny = true;
+      }
+
+    }
+
+  });
+}
+
 if (filterProducts != null) {
 
   var filterable = new Vue({
