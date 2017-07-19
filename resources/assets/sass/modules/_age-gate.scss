@@ -1,0 +1,53 @@
+div#age-gate {
+  color: rgba(275,275,275,0.3);
+  h1 {
+    font-size: 22px; 
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    background: rgba(0,0,20,0.85);
+    z-index: 9999;
+  }
+  section.modal {
+    background: #010920;
+    position: relative;
+    z-index: 9999;
+    width: 28%;
+    margin: 15vw auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  button {
+    background: #006299;
+    border: none;
+    font-size: 24px;
+    color: #3b9bcc;
+    border: 1px solid #3b9bcc;
+    line-height: 60px;
+    min-width: 150px;
+  }
+
+  .copy {
+    border: 1px solid #353a4d;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    h1, p {
+      margin-bottom: 25px;
+    }
+    h1.heading {
+      margin-top: -45px;
+      background: #010920;
+    }
+    h1.message {
+      color: white;
+    }
+  }
+}
