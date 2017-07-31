@@ -10,6 +10,7 @@
 
     <title>Swallow.la</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="https://use.fontawesome.com/e6f27715c0.js"></script>
 

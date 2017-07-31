@@ -39,6 +39,8 @@ div#age-gate {
     min-width: 150px;
     font-family: 'Playfair Display', serif;
     margin: 0 15px;
+    font-weight:900; 
+    font-style:italic;
     &:hover {
       cursor: pointer;
     }
