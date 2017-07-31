@@ -8,6 +8,7 @@
 
     @include('partials._new_product')
     @include('partials._edit_company')
+    @include('partials._connect-dispensary')
 
     <div class="row">
         <div class="col-md-12">

@@ -4,7 +4,7 @@
 
 @section('content')
 
-@if(Cookie::get('age') == null)
+@if(Cookie::get('age') != null)
   @include('partials._age-gate')
 @endif
 

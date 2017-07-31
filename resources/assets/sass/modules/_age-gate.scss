@@ -1,7 +1,7 @@
 div#age-gate {
-  color: rgba(275,275,275,0.3);
+  color: rgba(275,275,275,0.3); 
   h1 {
-    font-size: 22px; 
+    font-size: 36px; 
   }
   &:before {
     content: '';
@@ -14,7 +14,12 @@ div#age-gate {
     background: rgba(0,0,20,0.85);
     z-index: 9999;
   }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+  }
   section.modal {
+    display: block;
     background: #010920;
     position: relative;
     z-index: 9999;
@@ -25,13 +30,18 @@ div#age-gate {
     text-align: center;
   }
   button {
-    background: #006299;
+    background: transparent;
     border: none;
     font-size: 24px;
-    color: #3b9bcc;
-    border: 1px solid #3b9bcc;
-    line-height: 60px;
+    color: #ff3066;
+    border: 1px solid #ff3066;
+    line-height: 50px;
     min-width: 150px;
+    font-family: 'Playfair Display', serif;
+    margin: 0 15px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .copy {
