@@ -41506,6 +41506,7 @@ if (onboard != null) {
 
     mounted: function mounted() {
       this.fetchCompanies(this.category);
+      this.setCategory();
     },
 
 
@@ -41518,6 +41519,20 @@ if (onboard != null) {
         }
       },
 
+
+      setCategory: function setCategory() {
+        this.category = this.getParameterByName('category');
+      },
+
+      getParameterByName: function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      },
 
       confirmCompany: function confirmCompany(id) {
         this.confirm = id;

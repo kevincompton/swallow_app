@@ -1,0 +1,87 @@
+.partners-container {
+  background: #f4f4f4;
+  form {
+    max-width: 60%;
+    margin: auto;
+    input.form-control {
+      background: #eff0f4;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+      box-shadow: none;
+      line-height: 35px;
+      text-indent: 15px;
+    }
+    textarea {
+      background: #eff0f4;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+      box-shadow: none;
+    }
+    label {
+      color: #acb0bc;
+      font-weight: 500;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 25px;
+    }
+    button {
+      background: #ff3066;
+      border: none;
+    }
+  }
+  ul.onboard-toggle {
+    border-bottom: 1px solid #cbcacf;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    height: 50px;
+    li {
+      display: inline-block;
+      margin: 0 15px;
+      &.active {
+        border-bottom: 2px solid #505362;
+      }
+    }
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #505362;
+      text-decoration: none;
+      line-height: 48px;
+    }
+  }
+
+  select {
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin-bottom: 45px;
+  }
+  .form-control {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    display: block;
+    width: 100%;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+}

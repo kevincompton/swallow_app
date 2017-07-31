@@ -1,7 +1,7 @@
-<div class="panel panel-default">
-    <div class="panel-heading">Add Product</div>
-
-    <div class="panel-body">
+<div class="modal add_product_modal">
+    <div class="modal-wrap">
+        <i id="cancel" class="fa fa-times-circle-o modal_close" aria-hidden="true"></i>
+        <h2>Add Product</h2>
         {!! Form::open(['url' => '/product/create', 'files' => true]) !!}
             <input name="user_id" type="hidden" value="{{ $user->id }}">
             <div class="row">

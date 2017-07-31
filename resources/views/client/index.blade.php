@@ -7,7 +7,7 @@
   <span id="filterable">
     <div class="search-wrapper">
 
-      <div class="search-input">
+      <div class="input-zip-code search-input">
         <input
           id="keywords"
           name="keywords"
@@ -19,22 +19,34 @@
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </div>
 
-      <div class="category dropdown" v-for="category in categories">
-        <h4>@{{ category.title }}</h4>
+      <div class="dropdown">
+        <div class="column" v-for="category in categories">
+          <h4>@{{ category.title }} <i class="fa fa-angle-down" aria-hidden="true"></i></h4>
 
-        <div v-for="tag in category.tags" class="form-check">
-          <label class="form-check-label">
-            <input v-on:click="toggleTag(tag)" type="checkbox" class="form-check-input" :value="tag.id">
-            @{{ tag.title }}
-          </label>
+          <ul v-for="tag in category.tags" class="form-check">
+            <li>
+              <label class="form-check-label">
+                <input v-on:click="toggleTag(tag)" type="checkbox" class="form-check-input" :value="tag.id">
+                @{{ tag.title }}
+              </label>
+            </li>
+          </ul>
         </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="selected-filters">
+        <span class="badge" v-for="tag in selected" v-on:click="deselectTag(tag)">@{{ tag.title }} <i class="fa fa-times" aria-hidden="true"></i></span>
       </div>
 
     </div>
 
     <div class="flex-container client-wrapper">
       <main>
-      <h3>Edibles Directory</h3>
+      <h3 class="section-heading">Edibles Directory</h3>
+        <p v-if="filteredProducts.length == 0">
+          Your search returned no results, delesect filters to broaden your search.
+        </p>
         <section id="product-list">
           <transition-group name="list">
             <div class="product" v-for="(product, index) in filteredProducts" v-bind:key="product" v-if="index < limit">

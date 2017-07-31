@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use Illuminate\Contracts\Filesystem\Filesystem;
 
 class ProductController extends Controller
 {
@@ -12,25 +13,35 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
+      $user = Auth::user();
+      $company = \App\Company::find($user->company_id);
+
       $product = new \App\Product;
       $product->image = '';
-      $product->user_id = $request->user_id;
+      $product->user_id = $user->id;
       $product->name = $request->name;
       $product->ingredients = $request->ingredients;
       $product->strength = $request->strength;
       $product->description = $request->description;
+      $product->wordpress_id = 0;
+      $product->brand_id = $company->id;
       $product->save();
 
-      $imageName = $product->id . '.' . 
-        $request->file('image')->getClientOriginalExtension();
-      $request->file('image')->move(
-        base_path() . '/public/images/products/', $imageName
-      );
-      $product->image = $imageName;
+      if($request->file('image') != null) {
+        $image = $request->file('image');
+        $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+
+        $s3 = \Storage::disk('s3');
+        $filePath = '/wp-content/uploads/' . $imageFileName;
+        $s3->put($filePath, file_get_contents($image), 'public');
+        $product->image = $imageFileName;
+      }
 
       $product->save();
 
-      $this->wpCreate($product->id);
+      $product->companies()->attach($company->id);
+
+      //$this->wpCreate($product->id);
 
       return back();
     }
@@ -243,24 +254,31 @@ class ProductController extends Controller
 
     }
 
-    private function update(Request $request, $id)
+    public function update(Request $request, $id)
     {
       $product = \App\Product::find($id);
       $user = Auth::user();
 
       if($request->image != null) {
-        $imageName = $product->id . '.' . 
-          $request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(
-          base_path() . '/public/images/products/', $imageName
-        );
-        $product->image = $imageName;
+        $image = $request->file('image');
+        $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+
+        $s3 = \Storage::disk('s3');
+        $filePath = '/wp-content/uploads/' . $imageFileName;
+        $s3->put($filePath, file_get_contents($image), 'public');
+        $product->image = $imageFileName;
       }
 
       $product->name = $request->name;
-      $product->ingredients = $request->ingredients;
-      $product->strength = $request->strength;
-      $product->description = $request->description;
+      if(isset($request->ingredients)) {
+        $product->ingredients = $request->ingredients;
+      }
+      if(isset($request->strength)) {
+        $product->strength = $request->strength;
+      }
+      if(isset($request->description)) {
+        $product->description = $request->description;
+      }
       $product->save();
 
       $this->updateWordpress($request, $product->id);

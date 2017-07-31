@@ -132,7 +132,7 @@ if(filterProducts != null){
         if(tags != null) {
           tags = tags.split(',');
           for (var i = tags.length - 1; i >= 0; i--) {
-            $("[value=" + tags[i] + "]").prop('checked', true);
+            $("[value=" + tags[i] + "]").trigger('click');
           }
         }
 
@@ -148,6 +148,10 @@ if(filterProducts != null){
           parent.selected.push(tag);
         }
 
+      },
+
+      deselectTag: function(tag) {
+        $("[value=" + tag.id + "]").trigger('click');
       },
 
       setLocation: function() {
@@ -205,6 +209,34 @@ if(filterProducts != null){
 
 }
 
+$('.add_product_trigger').on('click', function() {
+  $('.add_product_modal').fadeIn();
+});
+
+$('.edit_company_trigger').on('click', function() {
+  $('.edit_company_modal').fadeIn();
+});
+
+$('.edit_product_trigger').on('click', function() {
+  $(this).parent().addClass('edit_active');
+});
+
+$('.modal_close').on('click', function() {
+  $('.modal').fadeOut();
+});
+
+$('button.filter').on('click', function() {
+  $(this).toggleClass('active');
+  $('.dropdown').toggleClass('active');
+  $(this).find('i').toggleClass('fa-angle-down');
+  $(this).find('i').toggleClass('fa-angle-up');
+});
+
+$('.dropdown h4').on('click', function() {
+  $(this).parent().toggleClass('active');
+  $(this).find('i').toggleClass('fa-angle-down');
+  $(this).find('i').toggleClass('fa-angle-up');
+});
 
 $('a.menu-button').on('click', function() {
   $('nav.mobile-nav').toggleClass('active');

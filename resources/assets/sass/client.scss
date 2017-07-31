@@ -5,7 +5,7 @@
 @import "/client/_junkdrawer";
 
 body {
-  background: #000a20;
+  background: black;
   .client-wrapper {
     background-color: #f3f4f5;
   }
@@ -22,12 +22,20 @@ hr {
 @import "/client/layout/_header";
 @import "/client/layout/_footer"; 
 
-.client-wrapper {
+.client-wrapper, .partners-container {
   max-width: 1400px;
   margin: auto;
   margin-top: 80px;
 }
-
+.partners-container {
+  background: white;
+  padding: 60px;
+}
+.body__partners {
+  section.partners {
+    display: none;
+  }
+}
 
 // Transitions
 .list-enter-active, .list-leave-active {
@@ -39,6 +47,13 @@ hr {
 } 
 
 // Forms
+select {
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .input-lg {
   height: 46px;
   padding: 10px 16px;
@@ -56,7 +71,7 @@ hr {
   background-image: none;
   border: 1px solid #ccc;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-} 
+}
 
 // Modules
 @import "/client/modules/_listproduct";
@@ -70,8 +85,14 @@ hr {
 @import "/client/modules/_dispensaryindex";
 @import "/client/modules/_home";
 @import "/modules/_age-gate";
+@import "/client/modules/_search";
+@import"/modules/_autocomplete";
+@import"/modules/_panel";
+@import"/modules/_modal";
 
-
+// Sections
+@import "/sections/_onboard"; 
+@import "/sections/_dash"; 
 
 
 

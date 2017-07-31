@@ -58,8 +58,10 @@ class HomeController extends Controller
     public function edibles()
     {
         $user = Auth::user();
-        $products = $user->products()->active()->get();
-        $deactivated_products = $user->products()->deactivated()->get();
+        $company = \App\Company::find($user->company_id);
+        $products = $company->products()->active()->get();
+
+        $deactivated_products = $company->products()->deactivated()->get();
         $links = null;
         $dispensaries = null;
 
@@ -86,6 +88,7 @@ class HomeController extends Controller
 
         $data = [
             "user" => $user,
+            "company" => $company,
             "products" => $products,
             "deactivated_products" => $deactivated_products,
             "links" => $links,

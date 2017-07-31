@@ -40,6 +40,10 @@ h4, h5 {
 
 textarea, input, button { outline: none; }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 60px;
 }
@@ -51,6 +55,10 @@ h2 {
 
 h3 {
   font-size: 36px
+}
+
+h3.section-heading {
+  margin-bottom: 15px;
 }
 
 p {

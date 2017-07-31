@@ -35,6 +35,7 @@ if(onboard != null){
 
       mounted() {
         this.fetchCompanies(this.category);
+        this.setCategory();
       },
 
       methods: {
@@ -45,6 +46,20 @@ if(onboard != null){
           } else {
             this.confirmCompany(option);
           }
+        },
+
+        setCategory: function() {
+          this.category = this.getParameterByName('category');
+        },
+
+        getParameterByName: function(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
         },
 
         confirmCompany: function(id) {

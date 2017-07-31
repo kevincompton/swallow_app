@@ -15,39 +15,37 @@
     
 
       {!! Form::open(['url' => '/products/filter/', 'method' => 'GET']) !!}
-          <div class="options">
-              
-              <div class="input-zip-code">
-                  <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search edible directory...">
-                  <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                  <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-              </div>
-              <div class="dropdown">
+        <div class="options">
+            
+            <div class="input-zip-code">
+                <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search edible directory...">
+                <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div id="home-dropdown" class="dropdown">
 
-                @foreach($categories as $category)
-                  <div class="column">
-                      <h4>{{ $category->title }} <i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-                      <ul>
+              @foreach($categories as $category)
+                <div class="column">
+                    <h4>{{ $category->title }} <i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+                    <ul>
 
-                        @foreach($category->tags()->get() as $tag)
-                          <li>
-                              <label>
-                                  <input type="checkbox" name="tag_{{ $tag->id }}" value="{{ $tag->id }}">
-                                  {{ $tag->title }}
-                              </label>
-                          </li>
-                        @endforeach
+                      @foreach($category->tags()->get() as $tag)
+                        <li>
+                            <label>
+                                <input type="checkbox" name="tag_{{ $tag->id }}" value="{{ $tag->id }}">
+                                {{ $tag->title }}
+                            </label>
+                        </li>
+                      @endforeach
 
-                      </ul> 
-                  </div>
-                @endforeach
+                    </ul> 
+                </div>
+              @endforeach
 
-                <div class="clear"></div>
-              </div>
+              <div class="clear"></div>
+            </div>
 
-          </div><!-- end options -->
-          
-          
+        </div><!-- end options -->          
       {!! Form::close() !!}
 
       <h4>FEATURED ON</h4>

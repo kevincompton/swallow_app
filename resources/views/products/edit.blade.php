@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.client')
+
+@section('body_class', 'body__partners')
 
 @section('content')
 <div class="container">

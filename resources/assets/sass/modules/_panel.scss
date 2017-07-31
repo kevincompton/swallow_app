@@ -1,0 +1,49 @@
+.panel-wrapper {
+  display: flex;
+  margin: 30px auto;
+  margin-left: -2%;
+  line-height: 1.5;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  &.info-panels {
+    margin-left: 0;
+    .panel {
+      flex-basis: 48%;
+      margin: 0;
+      display: block;
+      &:first-child {
+        margin-right: 4%;
+      }
+    }
+  }
+  .panel {
+    max-width: 48%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    font-size: 16px;
+    margin: 2%;
+    flex-basis: 20%;
+    img {
+      max-width: 100%;
+    }
+    &.add {
+      text-align: center;
+      background: #e5e5e5;
+      box-shadow: none;
+      a {
+        color: #aaaaaa;
+      }
+      i {
+        font-size: 64px;
+      }
+    }
+  }
+  ul {
+    clear: both;
+    li {
+      line-height: 1.8;
+    }
+  }
+}

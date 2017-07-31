@@ -27,7 +27,19 @@
           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           <li class="spacer">|</li>
-          <li><a href="#">SIGN IN / SIGNUP</a></li>
+          @if (Auth::guest())
+            <li><a href="/register">SIGN IN / SIGNUP</a></li>
+          @else
+            <li>{{ Auth::user()->name }} / <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+            </li>
+          @endif
         </ul>
 
         <a class="logo" href="/">
@@ -66,11 +78,11 @@
     <section class="partners">
       <div style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)">
         <h2>List your edible in Swallow's directory</h2>
-        <a class="btn">ADD YOUR EDIBLES</a>
+        <a href="/register?category=edibles" class="btn">ADD YOUR EDIBLES</a>
       </div>
       <div style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)">
         <h2>Add your dispensary to our directory</h2>
-        <a class="btn">ADD YOUR DISPENSARY</a>
+        <a href="/register?category=dispensary" class="btn">ADD YOUR DISPENSARY</a>
       </div>
       <hr class="clear">
     </section>
@@ -116,6 +128,7 @@
     </div>   
 
     <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/client.js') }}"></script>
 </body>
 </html>

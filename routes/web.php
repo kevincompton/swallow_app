@@ -21,6 +21,8 @@ Route::get('/education', 'ClientController@education');
 Route::get('/dispensaries', 'ClientController@dispensaryIndex');
 Route::get('/products/filter', 'ClientController@results');
 
+
+
 // client API
 Route::get('/client/products', 'ClientController@fetchProducts');
 Route::get('/client/tags', 'ClientController@fetchTags');
