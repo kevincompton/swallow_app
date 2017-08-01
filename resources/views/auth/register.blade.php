@@ -67,9 +67,9 @@
                 </div>
 
                 <div v-if="company != null">
-                    <input type="hidden" name="wpid" :value="company.id"/>
+                    <input type="hidden" name="company_id" :value="company.id"/>
                     <input type="hidden" name="company" :value="company.title"/>
-                    <h2>@{{ company.title }} <small><a href="#" v-on:click="clearCompany()">change company</a></small></h2>
+                    <h4>@{{ company.title }} <small><a href="#" v-on:click="clearCompany()">change company</a></small></h4>
                 </div>
 
                 <div v-if="new_form" class="product-form">

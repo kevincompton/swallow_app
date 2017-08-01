@@ -34,12 +34,12 @@ class HomeController extends Controller
 
         if($user->approved == false) {
             return view('pending')->with($data);
+        } elseif($user->admin == true) {
+            return redirect('/admin');
         } elseif($user->category == "edibles") {
             return $this->edibles();
         } elseif($user->category == "dispensary") {
             return $this->dispensary();
-        } else {
-            return redirect('/admin');
         }
 
     }

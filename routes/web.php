@@ -61,7 +61,7 @@ Route::get('/sync/brands', 'ImportController@syncBrands')->middleware('admin');
 // internal API
 Route::get('/products', 'APIController@fetchProducts');
 Route::get('/user/products', 'APIController@fetchUserProducts');
-Route::get('/companies/{category}', 'APIController@wpUsers');
+Route::get('/companies/{category}', 'APIController@fetchCompanies');
 Route::get('/wp/products/{company}', 'APIController@wpProducts');
 
 

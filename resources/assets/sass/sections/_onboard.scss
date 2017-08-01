@@ -1,10 +1,16 @@
 .partners-container {
   background: #f4f4f4;
+  .breadcrumb {
+    font-size: 14px;
+    li {
+      display: inline-block;
+    }
+  }
   form {
     max-width: 60%;
     margin: auto;
     input.form-control {
-      background: #eff0f4;
+      background: #d8d8d8;
       border-radius: 5px;
       font-size: 16px;
       border: none;

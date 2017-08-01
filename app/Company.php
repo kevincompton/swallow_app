@@ -22,4 +22,9 @@ class Company extends Model
         return $query->where('category', '=', 'dispensary');
     }
 
+    public function scopeEdibles($query)
+    {
+        return $query->where('category', '=', 'edibles');
+    }
+
 }

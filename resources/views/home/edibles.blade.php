@@ -19,6 +19,10 @@
 
                     <div class="panel-wrapper info-panels">
                         <div class="panel">
+                            @if($user->company()->first()->name != null)
+                                <h5>{{ $user->company()->first()->name }}</h5>
+                            @endif
+                            
                             @if($user->company()->first()->address != null)
                                 <h5>{{ $user->company()->first()->name }}</h5>
                                 {{ $user->company()->first()->phone }}<br>
@@ -28,7 +32,7 @@
                                 <a target="_blank" href="{{ $user->company()->first()->website }}" class="website_icon">{{ $user->company()->first()->website }}</a><br>
                                 <a target="_blank" href="#" class="insta_icon">{{ $user->company()->first()->instagram }}</a>
                             @else 
-                                <a href="#"><h5 class="info-cta">Add Company Information</h5></a>
+                                <a class="edit_company_trigger" href="javascript:void(0)"><h5 class="info-cta">Add Company Information</h5></a>
                             @endif
                         </div>
 
@@ -59,18 +63,13 @@
                         <div class="panel">
                             <div class="product">
                                 @if($product->image != "empty")
-                                    <img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/wp-content/uploads/{{ $product->image }}" class="img-thumbnail" />
+                                    <img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/{{ $product->image }}" class="img-thumbnail" />
                                 @else 
                                     <h5><a href="#">Add Image</a></h5>
                                 @endif
                                 <h4>{{ $product->name }}</h4>
-                                
-                                <div class="details">
-                                    @include('partials._edit_product')
-                                </div>
 
-                                <a class="btn btn-default edit_product_trigger" href="javascript:void(0)">Edit Product</a>
-                                
+                                <a class="btn btn-default" href="product/edit/{{ $product->id }}">Edit Product</a>
                             </div>
                         </div>
                     @endforeach

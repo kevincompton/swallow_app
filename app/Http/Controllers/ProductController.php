@@ -194,7 +194,7 @@ class ProductController extends Controller
       $product = \App\Product::find($id);
       $user = Auth::user();
 
-      if($product->user_id != $user->id) {
+      if($product->brand_id != $user->company_id) {
         return back();
       }
 

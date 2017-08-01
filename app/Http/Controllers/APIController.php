@@ -42,6 +42,21 @@ class APIController extends Controller
     return $data;
   }
 
+  public function fetchCompanies($category)
+  {
+    if($category == "edibles") {
+      $companies = \App\Company::edibles()->get();
+    } else {
+      $companies = \App\Company::dispensaries()->get();
+    }
+
+    $data = [
+      "companies" => $companies
+    ];
+
+    return $data;
+  }
+
   public function wpUsers($category)
   {
     if($category == "edibles") {

@@ -95,8 +95,8 @@ if(onboard != null){
 
               for (var i = data.companies.length - 1; i >= 0; i--) {
                 var company = {
-                  title: data.companies[i].post_title,
-                  id: data.companies[i].ID
+                  title: data.companies[i].name,
+                  id: data.companies[i].id
                 };
                 companies.push(company);
               }

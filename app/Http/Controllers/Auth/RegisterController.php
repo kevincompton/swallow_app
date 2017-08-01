@@ -66,31 +66,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        if(isset($data['wpid'])) {
-            $wordpress_id = $data['wpid'];
+        if(isset($data['company_id'])) {
+            $company_id = $data['company_id'];
+            $wordpress_id = \App\Company::find($company_id)->wordpress_id;
         } else {
-
-            if($data['category'] == 'edibles') {
-                $company = 'company';
-            } else {
-                $company = 'dispensary';
-            }
-            
-            $wpCompany = wpCompany::create([
-                'post_title' => $data['company'],
-                'post_type' => $company,
-                'post_date' => new DateTime(),
-                'post_date_gmt' => new DateTime(),
-                'post_modified' => new DateTime(),
-                'post_modified_gmt' => new DateTime(),
-                'post_content' => '',
-                'post_excerpt' => '',
-                'to_ping' => '',
-                'pinged' => '',
-                'post_content_filtered' => ''
-            ]);
-
-            $wordpress_id = $wpCompany->id;
+            $company_id = 0;
+            $wordpress_id = 0;
         }
         return User::create([
             'name' => $data['name'],
@@ -98,7 +79,8 @@ class RegisterController extends Controller
             'category' => $data['category'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'wordpress_id' => $wordpress_id
+            'company_id' => $company_id,
+            'wordpress_id' => $company_id
         ]);
     }
 }
