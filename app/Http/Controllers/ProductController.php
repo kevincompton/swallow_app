@@ -153,10 +153,10 @@ class ProductController extends Controller
       return back();
     }
 
-    public function linkProduct($id)
+    public function linkProduct(Request $request)
     {
       $user = Auth::user();
-      $product = \App\Product::find($id);
+      $product = \App\Product::find($request->product);
 
       $user->products()->attach($id);
       $user->save();

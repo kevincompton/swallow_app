@@ -33,7 +33,8 @@ class APIController extends Controller
   public function fetchUserProducts()
   {
     $user = Auth::user();
-    $products = $user->products()->get();
+    $company = \App\Company::find($user->company_id);
+    $products = $company->products()->get();
 
     $data = [
       "products" => $products

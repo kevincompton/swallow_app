@@ -41,7 +41,7 @@ Route::post('/product/create', 'ProductController@create');
 Route::put('/product/update/{id}', 'ProductController@update');
 Route::get('/product/deactivate/{id}', 'ProductController@deactivate');
 Route::get('/product/activate/{id}', 'ProductController@activate');
-Route::get('/product/link/{id}', 'ProductController@linkProduct');
+Route::post('/product/link/', 'ProductController@linkProduct');
 Route::get('/product/detach/{id}', 'ProductController@unlink');
 Route::get('/product/approve/{user}/{product}', 'ProductController@approveLink');
 Route::get('/product/delete/{id}', 'ProductController@delete');

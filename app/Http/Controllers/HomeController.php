@@ -47,9 +47,14 @@ class HomeController extends Controller
     public function dispensary()
     {
         $user = Auth::user();
+        $company = \App\Company::find($user->company_id);
+
+        $products = $company->products()->active()->get();
 
         $data = [
-            "user" => $user
+            "user" => $user,
+            "company" => $company,
+            "products" => $products
         ];
 
         return view('home.dispensaries')->with($data);

@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'company_id' => $company_id,
-            'wordpress_id' => $company_id
+            'wordpress_id' => $wordpress_id
         ]);
     }
 }

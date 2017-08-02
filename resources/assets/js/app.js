@@ -145,12 +145,11 @@ if(onboard != null){
         ],
         new_form: false,
         confirm: null,
-        user_products: []
+        product: null
       },
 
       mounted() {
         this.fetchProducts();
-        this.fetchUserProducts();
       },
 
       methods: {
@@ -160,6 +159,7 @@ if(onboard != null){
             this.new_form = true;
           } else {
             this.confirmProduct(option);
+            this.product = option.product_id;
           }
         },
 
@@ -172,35 +172,6 @@ if(onboard != null){
 
           this.confirm = null;
 
-          console.log('add product ' + id);
-          $.ajax({
-            type:'GET',
-            url: '/product/link/' + id,
-            dataType: 'json',
-            async: false,
-            success : function(data) {
-              parent.fetchUserProducts();
-            }
-          });
-        },
-
-        fetchUserProducts: function() {
-          var parent = this;
-
-          $.ajax({
-            type:'GET',
-            url: '/user/products/',
-            dataType: 'json',
-            async: false,
-            success : function(data) {
-              for (var i = data.products.length - 1; i >= 0; i--) {
-                data.products[i].image = "/images/products/" + data.products[i].image;
-                data.products[i].edit = "/product/edit/" + data.products[i].id;
-                data.products[i].detach = "/product/detach/" + data.products[i].id;
-              }
-              parent.user_products = data.products;
-            }
-          });
         },
 
         fetchProducts: function() {
@@ -217,15 +188,11 @@ if(onboard != null){
               for (var i = data.products.length - 1; i >= 0; i--) {
                 var product = {
                   title: data.products[i].name,
-                  description: data.products[i].company,
-                  thumbnail: '/images/products/' + data.products[i].image,
                   product_id: data.products[i].id,
                   meta: data.products[i].name + data.products[i].company
                 };
                 products.push(product);
               }
-
-              products.push({title: 'Add new product...', description: null, image: null, product_id: 0, meta: 'Add new product'});
 
               parent.options = products;
             }

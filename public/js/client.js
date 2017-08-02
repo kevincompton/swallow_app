@@ -41673,6 +41673,10 @@ $('.add_product_trigger').on('click', function () {
   $('.add_product_modal').fadeIn();
 });
 
+$('.connect_product_trigger').on('click', function () {
+  $('.connect_product_modal').fadeIn();
+});
+
 $('.add_dispensary_trigger').on('click', function () {
   $('.add_dispensary_modal').fadeIn();
 });

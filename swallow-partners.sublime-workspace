@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cre",
+				"createProducts"
+			],
+			[
 				"font",
 				"font-weight"
 			],
@@ -248,54 +252,54 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/partials/_age-gate.blade.php",
+			"file": "resources/views/partials/_edit_product.blade.php",
 			"settings":
 			{
-				"buffer_size": 555,
+				"buffer_size": 1731,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/client/welcome.blade.php",
+			"file": "resources/views/products/edit.blade.php",
 			"settings":
 			{
-				"buffer_size": 5102,
+				"buffer_size": 3309,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/layouts/client.blade.php",
+			"file": "resources/assets/sass/sections/_onboard.scss",
 			"settings":
 			{
-				"buffer_size": 5083,
+				"buffer_size": 1818,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/assets/sass/modules/_age-gate.scss",
+			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 1149,
+				"buffer_size": 3091,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/home/edibles.blade.php",
+			"settings":
+			{
+				"buffer_size": 4978,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/assets/sass/client/global/_typography.scss",
+			"file": "app/Http/Controllers/ProductController.php",
 			"settings":
 			{
-				"buffer_size": 1736,
+				"buffer_size": 7166,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/client/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 2718,
 				"line_ending": "Unix"
 			}
 		}
@@ -387,9 +391,13 @@
 	[
 		"/Users/kevincompton/Sites/swallow-partners",
 		"/Users/kevincompton/Sites/swallow-partners/app",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth",
 		"/Users/kevincompton/Sites/swallow-partners/resources",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/global",
@@ -397,49 +405,56 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/sections",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/home",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/products",
+		"/Users/kevincompton/Sites/swallow-partners/routes",
 		"/Users/kevincompton/Sites/swallow-partners/storage",
 		"/Users/kevincompton/Sites/swallow-partners/storage/app"
 	],
 	"file_history":
 	[
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/client.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_edit_company.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/HomeController.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Autocomplete.vue",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/register.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth/RegisterController.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/WordpressUser.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/APIController.php",
+		"/Users/kevincompton/Sites/swallow-partners/routes/web.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/AdminController.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/sections/_onboard.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/edibles.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/User.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/global/_typography.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/index.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_age-gate.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/client.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/welcome.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_age-gate.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_connect-dispensary.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_add-product.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/client.js",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/edibles.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_sidenav.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_header.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_panel.scss",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ProductController.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/HomeController.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_edit_company.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_new_product.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_edit_product.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/sections/_onboard.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/index.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/.env",
 		"/Users/kevincompton/Sites/swallow-partners/config/filesystems.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_footer.scss",
-		"/Users/kevincompton/Sites/swallow-partners/routes/web.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/sections/_dash.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_modal.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/global/_typography.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_age-gate.scss",
 		"/Users/kevincompton/Sites/swallow-partners/app/Product.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/dispensaries.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/app.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_autocomplete.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_listproduct.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/welcome.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth/RegisterController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/onboard.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/login.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/products/edit.blade.php",
@@ -451,12 +466,8 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/welcome.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_junkdrawer.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_reset.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_age-gate.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ClientController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/app.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Autocomplete.vue",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/APIController.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/User.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ImportController.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_07_01_182331_product_brand.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_28_190856_locations.php",
@@ -485,7 +496,6 @@
 		"/Users/kevincompton/Sites/swallow-partners/public/css/app.css",
 		"/Users/kevincompton/Sites/swallow-partners/composer.json",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Filterable.vue",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/AdminController.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Category.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_20_173139_create_tags_table.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Tag.php",
@@ -496,7 +506,6 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/admin.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/wpMeta.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_05_30_223846_deactivate.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/WordpressUser.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/home.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_05_29_201845_product_user_nullable_owner_id.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_05_29_201106_product_user_nullable.php",
@@ -615,16 +624,16 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/partials/_age-gate.blade.php",
+					"file": "resources/views/partials/_edit_product.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 555,
+						"buffer_size": 1731,
 						"regions":
 						{
 						},
@@ -633,36 +642,6 @@
 							[
 								0,
 								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/client/welcome.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5102,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
 							]
 						],
 						"settings":
@@ -679,86 +658,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "resources/views/layouts/client.blade.php",
+					"buffer": 1,
+					"file": "resources/views/products/edit.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5083,
+						"buffer_size": 3309,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								436,
-								436
+								217,
+								217
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/assets/sass/modules/_age-gate.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								807,
-								807
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "resources/assets/sass/client/global/_typography.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								878,
-								878
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -769,12 +688,42 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "resources/views/client/index.blade.php",
+					"buffer": 2,
+					"file": "resources/assets/sass/sections/_onboard.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2718,
+						"buffer_size": 1818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								119
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3091,
 						"regions":
 						{
 						},
@@ -787,12 +736,70 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/home/edibles.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1779,
+								1779
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/ProductController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4819,
+								4819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3076.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
