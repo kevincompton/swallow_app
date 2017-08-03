@@ -155,18 +155,16 @@ class ProductController extends Controller
 
     public function linkProduct(Request $request)
     {
+      
+
       $user = Auth::user();
-      $product = \App\Product::find($request->product);
+      $company = \App\Company::find($user->company_id);
 
-      $user->products()->attach($id);
-      $user->save();
+      return $request->product_id . ' ' . $company->id;
+      
+      $company->products()->attach($request->product_id);
 
-      $prod_user = DB::table('supplement_user')
-            ->where('user_id', $user->id)
-            ->where('product_id', $product->id)
-            ->update(['owner_id' => $product->id]);
-
-      return $product->id;
+      return back();
     }
 
     public function approveLink($userID, $productID)

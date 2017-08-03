@@ -19,7 +19,7 @@ class Product extends Model
 
     public function scopeActive($query)
     {
-        return $query->where('deactivate', '==', 0);
+        return $query->where('deactivate', '=', 0);
     }
 
     public function scopeImage($query)
@@ -29,7 +29,7 @@ class Product extends Model
 
     public function scopeDeactivated($query)
     {
-        return $query->where('deactivate', '==', 1);
+        return $query->where('deactivate', '=', 1);
     }
 
     public function tags()

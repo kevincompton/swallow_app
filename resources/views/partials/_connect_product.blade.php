@@ -7,19 +7,7 @@
             <div v-if="new_form == false">
                 <autocomplete-input :options="options" @select="onOptionSelect">
                     <template slot="item" scope="option">
-                        <article class="media">
-                            <div class="row">
-                                <div class="col-md-4">                              
-                                  <img :src="option.thumbnail">
-                                </div>
-                                <div class="col-md-8">
-                                    <p><strong>@{{ option.title }}</strong>
-                                     <br>
-                                    @{{ option.description }}
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
+                        <strong>@{{ option.title }}</strong>
                     </template>
                 </autocomplete-input>
             </div>

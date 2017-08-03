@@ -104,11 +104,11 @@
   ul.options-list {
     display: flex;
     flex-direction: column;
-    margin-top: -12px;
     border: 1px solid #dbdbdb;
     border-radius: 0 0 3px 3px;
     position: absolute;
-    width: 25%;
+    width: 85%;
+    top: 45px;
     overflow: hidden;
     z-index: 888;
   }
@@ -120,8 +120,9 @@
     margin: 0;
     border-bottom: 1px solid #eee;
     color: #363636;
-    padding: 7px;
+    padding: 15px;
     cursor: pointer;
+    font-size: 16px;
   }
 
   ul.options-list li.highlighted {

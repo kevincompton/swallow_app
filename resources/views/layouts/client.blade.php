@@ -31,7 +31,7 @@
           @if (Auth::guest())
             <li><a href="/register">SIGN IN / SIGNUP</a></li>
           @else
-            <li>{{ Auth::user()->name }} / <a href="{{ route('logout') }}"
+            <li><a href="/home">{{ Auth::user()->name }}</a> / <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
