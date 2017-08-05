@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
+
+    protected $fillable = [
+        'name', 'wordpress_id', 'category', 'latitude', 'longitude'
+    ];
     
     public function users()
     {

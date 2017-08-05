@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\wpCompany;
 use App\User;
+use App\Company;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -70,7 +70,16 @@ class RegisterController extends Controller
             $company_id = $data['company_id'];
             $wordpress_id = \App\Company::find($company_id)->wordpress_id;
         } else {
-            $company_id = 0;
+
+            $company = Company::create([
+                'name' => $data['company'],
+                'wordpress_id' => 0,
+                'category' => $data['category'],
+                'latitude' => 0,
+                'longitude' => 0
+            ]);
+
+            $company_id = $company->id;
             $wordpress_id = 0;
         }
         return User::create([
