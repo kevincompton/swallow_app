@@ -87,20 +87,20 @@
                 </div>
 
                 <script id="autocomplete-input-template" type="text/x-template">
-                  <div class="autocomplete-input">
-                    <p class="control has-icon has-icon-right">
-                      <input
-                        v-model="keyword"
-                        class="form-control input-lg"
-                        placeholder="Search companies or type add new..."
-                        @input="onInput($event.target.value)"
-                        @keyup.esc="isOpen = false"
-                        @blur="isOpen = false"
-                        @keydown.down="moveDown"
-                        @keydown.up="moveUp"
-                        @keydown.enter="select"
-                      >
-                      
+                    <div class="autocomplete-input">
+                        <p class="control has-icon has-icon-right">
+                          <input
+                            v-model="keyword"
+                            class="form-control input-lg"
+                            placeholder="Search companies or type add new..."
+                            @input="onInput($event.target.value)"
+                            @keyup.esc="isOpen = false"
+                            @blur="isOpen = false"
+                            @keydown.down="moveDown"
+                            @keydown.up="moveUp"
+                            @keydown.enter="select"
+                          >
+                        <input type="hidden" :value="keyword" name="company">
                     </p>
                     <ul v-show="isOpen" class="options-list">
                         <li v-for="(option, index) in fOptions"
