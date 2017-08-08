@@ -146,9 +146,9 @@ class ProductController extends Controller
     {
       $product = \App\Product::find($id);
       $user = Auth::user();
+      $company = \App\Company::find($user->company_id);
 
-      $user->products()->detach($id);
-      $user->save();
+      $company->products()->detach($id);
 
       return back();
     }
@@ -159,8 +159,6 @@ class ProductController extends Controller
 
       $user = Auth::user();
       $company = \App\Company::find($user->company_id);
-
-      return $request->product_id . ' ' . $company->id;
       
       $company->products()->attach($request->product_id);
 

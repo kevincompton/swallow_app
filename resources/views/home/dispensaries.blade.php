@@ -60,7 +60,7 @@
                                 @endif
                                 <h4>{{ $product->name }}</h4>
 
-                                <a class="btn btn-default" href="product/edit/{{ $product->id }}">Edit Product</a>
+                                <a class="btn btn-default" href="product/detach/{{ $product->id }}">Remove Product</a>
                             </div>
                         </div>
                     @endforeach
