@@ -64,17 +64,19 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $company = \App\Company::find($user->company_id);
-        $products = $company->products()->active()->get();
+        $products = DB::table('products')
+            ->where('brand_id', $company->id)
+            ->get();
 
         $deactivated_products = $company->products()->deactivated()->get();
         $links = null;
         $dispensaries = null;
 
         $links = DB::table('product_user')
-        ->where('owner_id', $user->id)
-        ->where('user_id', '!=', $user->id)
-        ->where('approved', false)
-        ->get();
+            ->where('owner_id', $user->id)
+            ->where('user_id', '!=', $user->id)
+            ->where('approved', false)
+            ->get();
 
         foreach ($links as $key => $link) {
             $link->user = \App\User::find($link->user_id)->company;
@@ -82,10 +84,10 @@ class HomeController extends Controller
         }
 
         $dispensaries = DB::table('product_user')
-        ->where('owner_id', $user->id)
-        ->where('user_id', '!=', $user->id)
-        ->where('approved', true)
-        ->get();
+            ->where('owner_id', $user->id)
+            ->where('user_id', '!=', $user->id)
+            ->where('approved', true)
+            ->get();
 
         foreach ($dispensaries as $key => $dispensary) {
             $dispensary->company = \App\User::find($dispensary->user_id)->company;
