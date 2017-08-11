@@ -210,6 +210,7 @@ if(filterProducts != null){
 }
 
 $('.add_product_trigger').on('click', function() {
+  $('.modal').fadeOut();
   $('.add_product_modal').fadeIn();
 });
 

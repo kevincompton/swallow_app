@@ -56,5 +56,8 @@
 
             <button type="submit" class="btn btn-default">Submit</button>
         {!! Form::close() !!}
+
+        <a class="add_product_trigger" href="javascript:void(0)">Add A New Product</a>
+
     </div>
 </div>

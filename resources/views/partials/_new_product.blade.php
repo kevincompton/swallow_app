@@ -1,7 +1,7 @@
 <div class="modal add_product_modal">
     <div class="modal-wrap">
         <i id="cancel" class="fa fa-times-circle-o modal_close" aria-hidden="true"></i>
-        <h2>Add Product</h2>
+        <h3>Add Product</h3>
         {!! Form::open(['url' => '/product/create', 'files' => true]) !!}
             <input name="user_id" type="hidden" value="{{ $user->id }}">
             <div class="row">
@@ -37,6 +37,18 @@
                     </div>  
                 </div>
             </div>
+
+            <div class="filters">
+                <h3>Filters</h3>
+
+                @foreach($tags as $tag)
+                    <div class="filter">
+                        <input name="filter[]" value="{{ $tag->id }}" type="checkbox">
+                        <label>{{ $tag->title }}</label>
+                    </div>
+                @endforeach
+            </div>
+
             <button type="submit" class="btn btn-default">Submit</button>
         {!! Form::close() !!}
     </div>

@@ -48,13 +48,22 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $company = \App\Company::find($user->company_id);
+        $tags = \App\Tag::all();
 
         $products = $company->products()->active()->get();
+        $owned_products = DB::table('products')
+            ->where('brand_id', $company->id)
+            ->get();
+
+        foreach ($owned_products as $key => $product) {
+            $products->prepend($product);
+        }
 
         $data = [
             "user" => $user,
             "company" => $company,
-            "products" => $products
+            "products" => $products,
+            "tags" => $tags
         ];
 
         return view('home.dispensaries')->with($data);
@@ -63,6 +72,7 @@ class HomeController extends Controller
     public function edibles()
     {
         $user = Auth::user();
+        $tags = \App\Tag::all();
         $company = \App\Company::find($user->company_id);
         $products = DB::table('products')
             ->where('brand_id', $company->id)
@@ -99,7 +109,8 @@ class HomeController extends Controller
             "products" => $products,
             "deactivated_products" => $deactivated_products,
             "links" => $links,
-            "dispensaries" => $dispensaries
+            "dispensaries" => $dispensaries,
+            "tags" => $tags
         ];
 
 

@@ -5,6 +5,7 @@
 @section('content')
 <div class="partners-container partner_dash">
 
+    @include('partials._new_product')
     @include('partials._edit_company')
     @include('partials._connect_product')
 
@@ -22,7 +23,6 @@
                             @endif
                             
                             @if($user->company()->first()->address != null)
-                                <h5>{{ $user->company()->first()->name }}</h5>
                                 {{ $user->company()->first()->phone }}<br>
                                 {{ $user->company()->first()->address }}<br>
                                 {{ $user->company()->first()->city }}, {{ $user->company()->first()->state }} {{ $user->company()->first()->zip }}<br>
@@ -53,14 +53,21 @@
                     @foreach($products as $product)
                         <div class="panel">
                             <div class="product">
+                                
                                 @if($product->image != "empty")
                                     <img src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/{{ $product->image }}" class="img-thumbnail" />
                                 @else 
                                     <h5><a href="#">Add Image</a></h5>
                                 @endif
+
                                 <h4>{{ $product->name }}</h4>
 
-                                <a class="btn btn-default" href="product/detach/{{ $product->id }}">Remove Product</a>
+                                @if($product->brand_id == $user->company()->first()->id)
+                                    <a class="btn btn-default" href="product/edit/{{ $product->id }}">Edit Product</a>
+                                @else
+                                    <a class="btn btn-default" href="product/detach/{{ $product->id }}">Remove Product</a>
+                                @endif
+
                             </div>
                         </div>
                     @endforeach
