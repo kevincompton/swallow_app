@@ -75,6 +75,7 @@ class ClientController extends Controller
       $company = $product->companies()->get()->first();
       $related_products = $company->products()->get()->take(5);
       $dispensaries = $product->companies()->where('category', 'dispensary')->get();
+      $product->description = strip_tags($product->description);
 
       $data = [
         "product" => $product,
