@@ -1,17 +1,14 @@
-<div class="modal add_dispensary_modal">
+<div id="company_autocomplete" class="modal add_dispensary_modal">
     <div class="modal-wrap">
       <i id="cancel" class="fa fa-times-circle-o modal_close" aria-hidden="true"></i>
       <h2>Add Dispensary</h2>
 
-      <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+      <form name="dispensary_connect_form" class="form-horizontal" role="form" method="POST" action="#">
           {{ csrf_field() }}
 
-        <input type="hidden" v-model="category" value="dispensary" />
+        <div class="form-group{{ $errors->has('company') ? ' has-error' : '' }}">
 
-        <div v-show="category != null" class="form-group{{ $errors->has('company') ? ' has-error' : '' }}">
-                <h4>Add @{{ category }}</h4>
-
-                <div v-if="new_form == false" id="onboard_autocomplete">
+                <div v-if="new_form == false">
                     <autocomplete-input v-if="company == null" :options="options" @select="onOptionSelect">
                         <template slot="item" scope="option">
                             <article class="media">
@@ -30,33 +27,13 @@
                     </autocomplete-input>
                 </div>
 
-                <div v-if="company != null">
-                    <input type="hidden" name="wpid" :value="company.id"/>
-                    <input type="hidden" name="company" :value="company.title"/>
-                    <h2>@{{ company.title }} <small><a href="#" v-on:click="clearCompany()">change company</a></small></h2>
-                </div>
-
-                <div v-if="new_form" class="product-form">
-                    <label for="company" class="col-md-4 control-label">Company Name</label>
-
-                    <div class="col-md-6">
-                        <input id="company" type="text" class="form-control" name="company" value="{{ old('company') }}" required>
-
-                        @if ($errors->has('company'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('company') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </div>
-
                 <script id="autocomplete-input-template" type="text/x-template">
                   <div class="autocomplete-input">
                     <p class="control has-icon has-icon-right">
                       <input
                         v-model="keyword"
                         class="form-control input-lg"
-                        placeholder="Search companies or type add new..."
+                        placeholder="Search dispensaries..."
                         @input="onInput($event.target.value)"
                         @keyup.esc="isOpen = false"
                         @blur="isOpen = false"

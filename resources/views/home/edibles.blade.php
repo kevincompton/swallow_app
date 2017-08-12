@@ -40,8 +40,8 @@
                             <h5>Manage Account</h5>
                             <ul>
                                 <li><a class="edit_company_trigger" href="javascript:void(0)">Edit Company Information</a></li>
-                                <li><a class="add_product_trigger" href="#">Add Products</a></li>
-                                <li><a href="#">Add Retail Location</a></li>
+                                <li><a class="add_product_trigger" href="javascript:void(0)">Add Products</a></li>
+                                <li><a class="add_dispensary_trigger" href="javascript:void(0)">Add Retail Location</a></li>
                             </ul>
                         </div>
                     </div>
@@ -88,8 +88,12 @@
                 <div class="panel-wrapper">
 
                     @foreach($dispensaries as $dispensary)
-                        <div class="panel">{{ $dispensary->company }}</div>
+                        <div class="panel">
+                            {{ $dispensary->name }}
+                            <a class="btn btn-default" href="/company/disconnect/{{ $dispensary->id }}">Remove Dispensary</a>
+                        </div>
                     @endforeach
+
                     <div class="panel add">
                         <div class="dispensary">
                             <a class="add_icon add_dispensary_trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i><br> Add Dispensary</a>

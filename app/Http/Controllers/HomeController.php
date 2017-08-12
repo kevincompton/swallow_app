@@ -71,6 +71,7 @@ class HomeController extends Controller
 
     public function edibles()
     {
+        $dispensaries = collect(new \App\Company);
         $user = Auth::user();
         $tags = \App\Tag::all();
         $company = \App\Company::find($user->company_id);
@@ -80,7 +81,6 @@ class HomeController extends Controller
 
         $deactivated_products = $company->products()->deactivated()->get();
         $links = null;
-        $dispensaries = null;
 
         $links = DB::table('product_user')
             ->where('owner_id', $user->id)
@@ -93,15 +93,18 @@ class HomeController extends Controller
             $link->product = \App\Product::find($link->product_id)->name;
         }
 
-        $dispensaries = DB::table('product_user')
-            ->where('owner_id', $user->id)
-            ->where('user_id', '!=', $user->id)
-            ->where('approved', true)
+        $related_dispensaries = DB::table('dispensaries_edibles')
+            ->where('edible_id', $company->id)
+            ->select('dispensary_id')
             ->get();
 
-        foreach ($dispensaries as $key => $dispensary) {
-            $dispensary->company = \App\User::find($dispensary->user_id)->company;
+        //return $related_dispensaries;
+
+        foreach ($related_dispensaries[0] as $key => $related) {
+            $dispensary = \App\Company::find($related);
+            $dispensaries->prepend($dispensary);
         }
+
 
         $data = [
             "user" => $user,

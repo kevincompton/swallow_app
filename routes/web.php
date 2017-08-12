@@ -30,6 +30,10 @@ Route::get('/confirm/age', 'ClientController@confirmAge');
 
 Auth::routes();
 
+// Company Routes
+Route::post('/company/connect/{company}', 'CompanyController@linkCompany');
+Route::get('/company/disconnect/{company}', 'CompanyController@unlinkCompany');
+
 // User Routes
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/profile', 'UserController@profile');

@@ -6,6 +6,103 @@ Vue.component('autocomplete-input', require('./components/Autocomplete.vue'));
 
 var onboard = document.getElementById('onboard-autocomplete');
 var autocomplete = document.getElementById('autocomplete');
+var company_autocomplete = document.getElementById('company_autocomplete');
+
+if(company_autocomplete != null){
+
+  const app = new Vue({
+      el: '#company_autocomplete',
+
+      data: {
+        options: [
+          {
+            title: 'First Scene',
+            description: 'lorem ipsum dolor amet.',
+            thumbnail: 'http://lorempicsum.com/nemo/200/200/1',
+            meta: 'hgkj'
+          },
+          {
+            title: 'Second Scene',
+            description: 'lorem ipsum dolor amet.',
+            thumbnail: 'http://lorempicsum.com/nemo/200/200/2',
+            meta: 'hgkj'
+          },
+          {
+            title: 'Third Scene',
+            description: 'lorem ipsum dolor amet.',
+            thumbnail: 'http://lorempicsum.com/nemo/200/200/3',
+            meta: 'hgkj'
+          },
+          {
+            title: 'Fourth Scene',
+            description: 'lorem ipsum dolor amet.',
+            thumbnail: 'http://lorempicsum.com/nemo/200/200/4',
+            meta: 'hgkj'
+          }
+        ],
+        new_form: false,
+        confirm: null,
+        company: null
+      },
+
+      mounted() {
+        this.fetchCompanies();
+      },
+
+      methods: {
+
+        onOptionSelect (option) {
+
+          this.confirmCompany(option);
+          
+        },
+
+        confirmCompany: function(option) {
+          this.confirm = option;
+        },
+
+        setCompany: function(company) {
+          this.company = company;
+
+          document.dispensary_connect_form.action = "/company/connect/" + this.company.company_id;
+          document.dispensary_connect_form.submit();
+        },
+
+        clearCompany: function() {
+          this.confirm = null;
+          this.company = null;
+        },
+
+        fetchCompanies: function() {
+          var parent = this;
+
+          $.ajax({
+            type:'GET',
+            url: '/companies/dispensary',
+            dataType: 'json',
+            async: false,
+            success : function(data) {
+              var companies = [];
+
+              for (var i = data.companies.length - 1; i >= 0; i--) {
+                var company = {
+                  title: data.companies[i].name,
+                  company_id: data.companies[i].id,
+                  meta: data.companies[i].name + data.companies[i].company
+                };
+                companies.push(company);
+              }
+
+              parent.options = companies;
+            }
+          });
+        },
+
+      }
+
+  });
+
+}
 
 if(onboard != null){
 
