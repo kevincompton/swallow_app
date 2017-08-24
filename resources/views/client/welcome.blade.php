@@ -10,7 +10,7 @@
 
 <div class="homepage-wrapper client-wrapper">
   <section class="hero">
-    <div class="slide-bg" style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)"></div>
+    <div class="slide-bg" style="background-image: url(/images/redesign/photos/hero.jpg)"></div>
     <h1>Welcome To The World's Largest Edible Directory</h1>
     
 
@@ -18,7 +18,7 @@
         <div class="options">
             
             <div class="input-zip-code">
-                <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search edible directory...">
+                <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search directory by keyword or select filters...">
                 <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
