@@ -132,6 +132,9 @@ class ClientController extends Controller
           $product->full_name = $product->name;
         }
         $product->s3_image = 'https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-688454114864/' . $product->image;
+        foreach ($product->tags as $key => $tag) {
+          $product->full_name = $product->full_name . ' ' . $tag->title;
+        }
       }
 
       $data = [

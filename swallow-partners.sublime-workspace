@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"com",
+				"companyID"
+			],
+			[
+				"dispen",
+				"dispensaries"
+			],
+			[
+				"overflow",
+				"overflow-y"
+			],
+			[
 				"over",
 				"overflow-y"
 			],
@@ -252,72 +264,55 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/partials/_new_product.blade.php",
-			"settings":
-			{
-				"buffer_size": 2578,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/partials/_connect_product.blade.php",
-			"settings":
-			{
-				"buffer_size": 2529,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/sass/modules/_modal.scss",
-			"settings":
-			{
-				"buffer_size": 894,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/ProductController.php",
-			"settings":
-			{
-				"buffer_size": 4060,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/ClientController.php",
-			"settings":
-			{
-				"buffer_size": 6060,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/assets/sass/client/global/_typography.scss",
-			"settings":
-			{
-				"buffer_size": 1769,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/Http/Controllers/HomeController.php",
 			"settings":
 			{
-				"buffer_size": 3065,
+				"buffer_size": 3130,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/home/dispensaries.blade.php",
+			"file": "resources/views/home/edibles.blade.php",
 			"settings":
 			{
-				"buffer_size": 4083,
+				"buffer_size": 5221,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/partials/_connect-dispensary.blade.php",
+			"settings":
+			{
+				"buffer_size": 3132,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 3263,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/CompanyController.php",
+			"settings":
+			{
+				"buffer_size": 648,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/assets/js/app.js",
+			"settings":
+			{
+				"buffer_size": 7387,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -412,7 +407,8 @@
 		"/Users/kevincompton/Sites/swallow-partners/app",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth",
+		"/Users/kevincompton/Sites/swallow-partners/database",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations",
 		"/Users/kevincompton/Sites/swallow-partners/resources",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js",
@@ -439,29 +435,33 @@
 	],
 	"file_history":
 	[
-		"/Users/kevincompton/Sites/swallow-partners/storage/framework/views/93d338f1ccfb0012a20b1812f83f42a02d5cb4f9.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ProductController.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/HomeController.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Product.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/dispensaries.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_dispensary.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/global/_typography.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/client.js",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_modal.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_connect_product.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/index.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/edibles.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/CompanyController.php",
+		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_08_11_233736_dispensaries_edibles.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_connect-dispensary.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/routes/web.php",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth/RegisterController.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/edibles.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Autocomplete.vue",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/HomeController.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ClientController.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_modal.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_autocomplete.scss",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/client.js",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/home/dispensaries.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/global/_typography.scss",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ProductController.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_connect_product.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_new_product.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/storage/framework/views/93d338f1ccfb0012a20b1812f83f42a02d5cb4f9.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Product.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_dispensary.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/index.blade.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Company.php",
+		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/Auth/RegisterController.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ImportController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/auth/register.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/components/Autocomplete.vue",
 		"/Users/kevincompton/Sites/swallow-partners/app/User.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/client.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_new_product.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/APIController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_panel.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_add-product.blade.php",
@@ -474,7 +474,6 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/modules/_age-gate.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/welcome.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_age-gate.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/partials/_connect-dispensary.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_sidenav.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/layout/_header.scss",
 		"/Users/kevincompton/Sites/swallow-partners/.env",
@@ -494,7 +493,6 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/welcome.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_junkdrawer.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_reset.scss",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/ClientController.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/app.scss",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_07_01_182331_product_brand.php",
 		"/Users/kevincompton/Sites/swallow-partners/database/migrations/2017_06_28_190856_locations.php",
@@ -564,9 +562,7 @@
 		"/Users/kevincompton/Sites/pre-order/resources/views/products.blade.php",
 		"/Users/kevincompton/Sites/pre-order/app/Http/Controllers/ShopifyAPIController.php",
 		"/Users/kevincompton/Sites/pre-order/resources/assets/sass/style.scss",
-		"/Users/kevincompton/Sites/pre-order/database/migrations/2017_05_02_230932_variant_meta.php",
-		"/Users/kevincompton/Sites/pre-order/database/migrations/2017_05_02_230250_create_variants_table.php",
-		"/Users/kevincompton/Sites/pre-order/public/js/views/charts.js"
+		"/Users/kevincompton/Sites/pre-order/database/migrations/2017_05_02_230932_variant_meta.php"
 	],
 	"find":
 	{
@@ -654,29 +650,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/partials/_new_product.blade.php",
+					"file": "app/Http/Controllers/HomeController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2578,
+						"buffer_size": 3130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2283,
-								2283
+								2617,
+								2617
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 962.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -684,19 +680,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/partials/_connect_product.blade.php",
+					"file": "resources/views/home/edibles.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2529,
+						"buffer_size": 5221,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2442,
-								2461
+								4673,
+								4673
 							]
 						],
 						"settings":
@@ -706,63 +702,33 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 572.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "resources/assets/sass/modules/_modal.scss",
+					"file": "resources/views/partials/_connect-dispensary.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 894,
+						"buffer_size": 3132,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								823,
-								823
+								315,
+								315
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/ProductController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4060,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								825,
-								825
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -773,30 +739,56 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/Http/Controllers/ClientController.php",
+					"buffer": 3,
+					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6060,
+						"buffer_size": 3263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1674,
-								1674
+								1251,
+								1251
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 975.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Http/Controllers/CompanyController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								617,
+								617
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -804,92 +796,32 @@
 				},
 				{
 					"buffer": 5,
-					"file": "resources/assets/sass/client/global/_typography.scss",
+					"file": "resources/assets/js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1769,
+						"buffer_size": 7387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								788,
-								788
+								1790,
+								1790
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 601.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/Http/Controllers/HomeController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3065,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1330,
-								1330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 719.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "resources/views/home/dispensaries.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4083,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3240,
-								3240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]

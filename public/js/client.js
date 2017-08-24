@@ -41594,11 +41594,12 @@ if (filterProducts != null) {
         var url = new URL(url_string);
 
         if (url.searchParams.get("search") != '') {
-          $('input.search').val(url.searchParams.get("search"));
+          //$('input.search').val(url.searchParams.get("search"));
+          this.keywords = url.searchParams.get("search");
         }
 
         var tags = url.searchParams.get("tags");
-        if (tags != null) {
+        if (tags != null || tags != '') {
           tags = tags.split(',');
           for (var i = tags.length - 1; i >= 0; i--) {
             $("[value=" + tags[i] + "]").trigger('click');
