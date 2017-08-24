@@ -95,6 +95,8 @@ if(filterProducts != null){
 
         return parent.products.filter(function (product) {
         
+          parent.keywords = null;
+
           if(parent.selected.length == 0) {
             return true;
           } else {
@@ -125,12 +127,11 @@ if(filterProducts != null){
         var url = new URL(url_string);
 
         if(url.searchParams.get("search") != '') {
-          //$('input.search').val(url.searchParams.get("search"));
           this.keywords = url.searchParams.get("search");
         }
         
         var tags = url.searchParams.get("tags");
-        if(tags != null || tags != '') {
+        if(tags != null && tags.length > 0) {
           tags = tags.split(',');
           for (var i = tags.length - 1; i >= 0; i--) {
             $("[value=" + tags[i] + "]").trigger('click');
@@ -141,6 +142,7 @@ if(filterProducts != null){
 
       toggleTag: function(tag) {
         var parent = this;
+        this.keywords = null;
 
         if(this.selected.includes(tag)) {
           var p = parent.selected.indexOf(tag);
