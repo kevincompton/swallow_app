@@ -93,8 +93,9 @@
         <li>Who Are We</li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Education</a></li>
-        <li><a href="#">Submit Edible</a></li>
-        <li><a href="#">Submit Dispensary</a></li>
+        <li><a href="/register?category=edibles">Submit Edible</a></li>
+        <li><a href="/register?category=dispensary">Submit Dispensary</a></li>
+        <li><a href="http://blog.swallow.la" target="_blank">News & Reviews</a></li>
       </ul>
       <ul>
         <li>Categories</li>

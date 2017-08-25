@@ -41542,7 +41542,7 @@ if (filterProducts != null) {
       categories: [],
       selected: [],
       limit: 50,
-      keywords: null,
+      keywords: '',
       latitude: 34.060165,
       longitude: -118.274480
     },
@@ -41558,6 +41558,18 @@ if (filterProducts != null) {
 
     computed: {
 
+      filteredByAll: function filteredByAll() {
+        return this.getByTags(this.getByKeyword(this.products, this.keywords), this.selected);
+      },
+
+      filteredByKeywords: function filteredByKeywords() {
+        return this.getByKeyword(this.products, this.keywords);
+      },
+
+      filteredByTags: function filteredByTags() {
+        return this.getByTags(this.products, this.selected);
+      },
+
       filteredProducts: function filteredProducts() {
         var parent = this;
 
@@ -41569,8 +41581,6 @@ if (filterProducts != null) {
         }
 
         return parent.products.filter(function (product) {
-
-          parent.keywords = null;
 
           if (parent.selected.length == 0) {
             return true;
@@ -41591,6 +41601,29 @@ if (filterProducts != null) {
 
     methods: {
 
+      getByKeyword: function getByKeyword(list, keyword) {
+        if (!keyword.length) return list;
+        var search = new RegExp(keyword, 'i');
+        return list.filter(function (item) {
+          return item.full_name.match(search);
+        });
+      },
+
+      getByTags: function getByTags(list, tags) {
+        var parent = this;
+
+        if (!tags) return list;
+        return list.filter(function (product) {
+          for (var i = parent.selected.length - 1; i >= 0; i--) {
+            if (parent.selected[i].products.includes(product.id)) {} else {
+              return false;
+            }
+          }
+
+          return true;
+        });
+      },
+
       setHomeFilters: function setHomeFilters() {
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -41610,7 +41643,6 @@ if (filterProducts != null) {
 
       toggleTag: function toggleTag(tag) {
         var parent = this;
-        this.keywords = null;
 
         if (this.selected.includes(tag)) {
           var p = parent.selected.indexOf(tag);
@@ -41637,8 +41669,6 @@ if (filterProducts != null) {
 
       fetchProducts: function fetchProducts() {
         var parent = this;
-
-        console.log('fetch products');
 
         $.ajax({
           type: 'GET',

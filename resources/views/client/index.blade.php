@@ -43,13 +43,13 @@
 
     <div class="flex-container client-wrapper">
       <main>
-      <h3 class="section-heading">Edibles Directory</h3>
+      <h3 class="section-heading">Edible Directory</h3>
         <p v-if="filteredProducts.length == 0">
           Your search returned no results, delesect filters to broaden your search.
         </p>
         <section id="product-list">
           <transition-group name="list">
-            <div class="product" v-for="(product, index) in filteredProducts" v-bind:key="product" v-if="index < limit">
+            <div class="product" v-for="(product, index) in filteredByAll" v-bind:key="product" v-if="index < limit">
                 <a :href="'/product/' + product.id">
                     <div v-if="product.s3_image" class="product-image">
                       <img :src="product.s3_image" />

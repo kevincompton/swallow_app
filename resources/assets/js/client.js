@@ -69,7 +69,7 @@ if(filterProducts != null){
       categories: [],
       selected: [],
       limit: 50,
-      keywords: null,
+      keywords: '',
       latitude: 34.060165,
       longitude: -118.274480
     },
@@ -85,6 +85,18 @@ if(filterProducts != null){
 
     computed: {
 
+      filteredByAll: function() {
+        return this.getByTags(this.getByKeyword(this.products, this.keywords), this.selected);
+      },
+
+      filteredByKeywords: function() {
+        return this.getByKeyword(this.products, this.keywords);
+      },
+
+      filteredByTags: function() {
+        return this.getByTags(this.products, this.selected);
+      },
+
       filteredProducts: function() {
         var parent = this; 
 
@@ -94,8 +106,6 @@ if(filterProducts != null){
         }
 
         return parent.products.filter(function (product) {
-        
-          parent.keywords = null;
 
           if(parent.selected.length == 0) {
             return true;
@@ -122,6 +132,29 @@ if(filterProducts != null){
 
     methods: {
 
+      getByKeyword: function(list, keyword) {
+        if (!keyword.length) return list;
+        const search = new RegExp(keyword, 'i');
+        return list.filter(item => item.full_name.match(search));
+      },
+
+      getByTags: function(list, tags) {
+        var parent = this;
+
+        if (!tags) return list;
+        return list.filter(function(product) {
+          for (var i = parent.selected.length - 1; i >= 0; i--) {
+            if(parent.selected[i].products.includes(product.id)) {
+              
+            } else {
+              return false;
+            }
+          }
+
+          return true;
+        });
+      },
+
       setHomeFilters: function() {
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -142,7 +175,6 @@ if(filterProducts != null){
 
       toggleTag: function(tag) {
         var parent = this;
-        this.keywords = null;
 
         if(this.selected.includes(tag)) {
           var p = parent.selected.indexOf(tag);
@@ -171,8 +203,6 @@ if(filterProducts != null){
 
       fetchProducts: function() {
         var parent = this;
-
-        console.log('fetch products');
 
         $.ajax({
           type:'GET',
@@ -211,6 +241,7 @@ if(filterProducts != null){
   });
 
 }
+
 
 $('.add_product_trigger').on('click', function() {
   $('.modal').fadeOut();

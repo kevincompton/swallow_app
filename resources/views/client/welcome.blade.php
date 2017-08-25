@@ -19,7 +19,7 @@
             
             <div class="input-zip-code">
                 <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search directory by keyword or select filters...">
-                <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <button type="button" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
             <div id="home-dropdown" class="dropdown">
@@ -60,15 +60,15 @@
   </section>
 
   <section class="featured-articles">
-    <article class="blog-post" style="background-image: url(/images/redesign/photos/cookie-sandwiches-PFMYYA6.jpg)">
+    <article class="blog-post" style="background-image: url(/images/products/kiva.jpg)">
       <h4>KIVA CONFECTIONS</h4>
       <h2>Alice Moon favorite for years!</h2>
-      <button class="btn">READ MORE ABOUT KIVA</button>
+      <a href="/company/16" class="btn">READ MORE ABOUT KIVA</a>
     </article>
-    <article class="blog-post" style="background-image: url(/images/redesign/photos/cookie-sandwiches-PFMYYA6.jpg)">
+    <article class="blog-post" style="background-image: url(/images/plastic_palmtree.jpg)">
       <h4>PLASTIC PALMTREE</h4>
       <h2>High end cannabis business branding</h2>
-      <button class="btn">VISIT PLASTICPALMTREE</button>
+      <a target="_blank" href="http://www.plasticpalmtree.net/emerald/" class="btn">VISIT PLASTICPALMTREE</a>
     </article>
     <div class="clear"></div>
   </section>
@@ -112,7 +112,7 @@
       <p>I first tried out this product when I was..</p>
       <a href="https://blog.swallow.la/2017/02/22/cannacure-pain-relieving-ultrabalm/" target="_blank" class="btn">READ MORE</a>
     </article>
-    <a class="btn">VIEW ARCHIVES</a>
+    <a class="btn" href="http://blog.swallow.la" target="_blank">VIEW ARCHIVES</a>
     <div class="clear"></div>
   </section>
 

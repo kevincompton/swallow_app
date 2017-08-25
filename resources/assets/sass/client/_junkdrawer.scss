@@ -22,13 +22,13 @@ h4 {
     }
 }
 
-main {
+.main {
     flex: 1;
     padding: 3rem;
 }
 
 @media screen and (min-width: 60rem) {
-    main {
+    .main {
         width: 80%;
     }
 }
@@ -119,5 +119,5 @@ h5 {
     margin-top: 1.5rem;
 }
 
-// _Header
+
 

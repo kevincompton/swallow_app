@@ -23,14 +23,17 @@
 
                 <div class="copy">
                     <h3>{{ $product->name }}</h3>
-                    <div class="meta">
-                        <div><strong>Ingredients:</strong> <span>{{ $product->ingredients }}</span></div>
-                        <div><strong>Strength:</strong> <span>{{ $product->strength }}</span></div>
-                    </div>
+                    
                     <div class="description">
                         <strong>Description</strong>
                         <div>{{ $product->description }}</div>
                     </div>
+
+                    <div class="meta">
+                        <div><strong>Strength:</strong> <span>{{ $product->strength }}</span></div>
+                        <div><strong>Ingredients:</strong> <span>{{ $product->ingredients }}</span></div>
+                    </div>
+
                     <div class="tags">
                       @foreach($product->tags()->get() as $tag)
                         <span>{{ $tag->title }}</span>
