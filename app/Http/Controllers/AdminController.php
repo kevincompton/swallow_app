@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Mail;
 
 class AdminController extends Controller
 {
@@ -28,6 +29,8 @@ class AdminController extends Controller
     $user = \App\User::find($id);
     $user->approved = 1;
     $user->save();
+
+    Mail::to($user->email)->send(new AccountApproved);
 
     return back();
   }
