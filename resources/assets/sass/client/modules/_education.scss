@@ -21,15 +21,25 @@ section#edible-education {
         margin: 0.75rem 0;
     }
 
-    img {
-        margin: 0 auto;
-        width: 90%;
+    ul {
+        margin-bottom: 45px;
     }
 
-    @media screen and (min-width: 769px) {
+    li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        margin: 0 25px;
+        width: 120px;
         img {
-            width: 60%;
+            display: block;
+            width: 90%;
+            margin: 15px auto;
         }
+    }
+
+    h3 {
+        margin-bottom: 30px;
     }
 
     .education-content {
@@ -103,13 +113,7 @@ section#edible-education {
         width: 50%;
     }
 
-    .education-content h2 {
-        color: #737272;
-        margin-bottom: 15px;
-        font-weight: 100;
-        font-family: 'Gotham-Medium', sans-serif;
-        display: block;
-    }
+
 
     .nav a {
         color: #000;
@@ -120,95 +124,26 @@ section#edible-education {
 
     .section-heading {
         align-items: center;
-        background: #fe4d82;
+        color: white;
+        background-size: cover;
+        background-position: center center;
         display: flex;
         justify-content: space-around;
         margin-bottom: 3rem;
         text-align: center;
-    }
-
-    .section-heading .leaf {
-        height: auto;
-        padding: 1rem;
-        width: 5rem;
-    }
-
-    @media screen and (min-width: 60rem) {
-        .section-heading .leaf {
-            width: 7rem;
+        padding: 85px;
+        position: relative;
+        &:after {
+            background: rgba(0, 0, 0, 0.65);
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
         }
-    }
-
-    h2 {
-        color: #fff;
-        display: inline-block;
-        font-family: 'Gotham-Bold', sans-serif;
-        font-size: 2.0rem;
-        padding: 1.5rem 0;
-        text-transform: uppercase;
-    }
-
-    @media screen and (min-width: 60rem) {
-        h2 {
-            font-size: 3.0rem;
-        }
-    }
-
-    h3 {
-        background: #fe4d82;
-        color: #fff;
-        font-family: 'Gotham-Bold', sans-serif;
-        font-size: 2.0rem;
-        margin: 3rem auto;
-        padding: 1.5rem 0;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    @media screen and (min-width: 60rem) {
-        h3 {
-            font-size: 3.0rem;
-        }
-    }
-
-    h4 {
-        background: #fe4d82;
-        color: #fff;
-        font-family: 'Gotham-Bold', sans-serif;
-        font-size: 2.0rem;
-        margin: 3rem auto;
-        padding: 1.5rem 0;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    @media screen and (min-width: 60rem) {
-        h4 {
-            font-size: 3.0rem;
-        }
-    }
-
-    h5 {
-        font-family: 'Gotham-Medium', sans-serif;
-        font-size: 2.4rem;
-        margin: 3rem auto 1.5rem;
-    }
-
-    @media screen and (min-width: 60rem) {
-        h5 {
-            font-size: 1.8rem;
-        }
-    }
-
-    h6 {
-        font-family: 'Gotham-Medium', sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    @media screen and (min-width: 60rem) {
-        h6 {
-            font-size: 1.6rem;
+        h1 {
+            z-index: 222;
         }
     }
 
@@ -216,27 +151,11 @@ section#edible-education {
         font-style: italic;
     }
 
-    p {
-        font-size: 1.3rem;
-        line-height: 143%;
-        margin: 0 auto 1.5rem;
-        width: 65%;
-    }
 
     @media screen and (min-width: 60rem) {
         p {
             font-size: 1.8rem;
         }
-    }
-
-    ul {
-        font-size: 1.2rem;
-        line-height: 133%;
-        list-style-type: initial;
-        margin: 0 auto 1.5rem;
-        padding-left: 1em;
-        text-align: left;
-        width: 65%;
     }
 
     @media screen and (min-width: 60rem) {
@@ -324,14 +243,4 @@ section#edible-education {
         width: 100%;
     }
 
-    footer {
-        margin-top: 6rem;
-        padding-bottom: 3rem;
-        text-align: left;
-    }
-
-    footer p {
-        font-family: 'Gotham-Medium', sans-serif;
-        font-size: 1.4rem;
-    }
 }

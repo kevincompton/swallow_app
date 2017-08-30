@@ -60,10 +60,10 @@
   </section>
 
   <section class="featured-articles">
-    <article class="blog-post" style="background-image: url(/images/products/kiva.jpg)">
-      <h4>KIVA CONFECTIONS</h4>
-      <h2>Alice Moon favorite for years!</h2>
-      <a href="/company/16" class="btn">READ MORE ABOUT KIVA</a>
+    <article class="blog-post" style="background-image: url(/images/redesign/photos/levo.jpg)">
+      <h4>LEVO OIL</h4>
+      <h2>Use code Swallow for $15 off!</h2>
+      <a href="https://www.levooil.com/" target="_blank" class="btn">VISIT LEVO</a>
     </article>
     <article class="blog-post" style="background-image: url(/images/plastic_palmtree.jpg)">
       <h4>PLASTIC PALMTREE</h4>
@@ -89,9 +89,9 @@
   <section class="about">
     <img src="/images/redesign/photos/cookie-sandwiches-PFMYYA6.jpg" />
     <h1>Why Edibles?</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <p>Edibles are discrete, delicious, reasonably priced, and effective. Edibles are perfect for those moments when you want to be medicated but can't smoke. Edibles have advanced over the years, which has led to most edibles being lab tested for THC content. By consuming a lab tested edible, you will have more control over the high you wish to receive. If you have had a bad high and are afraid of edibles, keep reading to learn how to enjoy edibles the right way.</p>
     <br>
-    <a class="btn">LEARN ABOUT EDIBLES</a>
+    <a href="/education" class="btn">LEARN ABOUT EDIBLES</a>
     <div class="clear"></div>
   </section>
 

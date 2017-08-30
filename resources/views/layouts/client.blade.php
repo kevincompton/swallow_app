@@ -48,7 +48,7 @@
         </a>
 
         <nav class="desktop-menu">
-          <a href="#">About</a>
+          <a href="/education">Education</a>
           <a href="/edibles">Directory</a>
           <a href="/dispensaries">Dispensaries</a>
           <a href="http://blog.swallow.la" target="_blank">News & Reviews</a>     
