@@ -12,10 +12,12 @@ class AdminController extends Controller
   {
       $pending_users = \App\User::pending()->get();
       $users = \App\User::approved()->get();
+      $companies = \App\Company::all();
 
       $data = [
           "pending_users" => $pending_users,
-          "users" => $users
+          "users" => $users,
+          "companies" => $companies
       ];
 
       return view('admin')->with($data);
