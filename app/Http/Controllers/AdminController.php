@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Mail;
+use App\Mail\AccountApproved;
 
 class AdminController extends Controller
 {
