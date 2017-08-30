@@ -1,17 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.client')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    "Your account needs approval" copy goes here.
-                </div>
+    <div class="partners-container partner_dash">
+        <div class="row">
+            <div class="col-md-12">
+                <section class="company-info">
+                    <p>Thanks for signing up with Swallow.la Your account will be approved/denied within 48 hours. If you have any questions, you can reach us at <a href="mailto:info@swallow.la">info@swallow.la</a></p>
+                </section>
             </div>
         </div>
     </div>
-</div>
 @endsection
