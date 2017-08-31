@@ -49,6 +49,9 @@
         background: #feffff;
         padding-left: 4%;
         text-align: center;
+        @include breakpoint(tablet){
+            padding-left: 0;
+        }
         > .btn {
             border-color: #fa3668;
             color: #fa3668;
@@ -67,6 +70,10 @@
             border-radius: 10px;
             overflow: hidden;
             min-height: 403px;
+            @include breakpoint(tablet){
+                width: 96%;
+                margin-bottom: 25px;
+            }
             h3,p,a {
                 position: relative;
                 z-index: 2;
@@ -101,10 +108,16 @@
         background: #f3f4f5;
         color: black;
         text-align: center;
+        @include breakpoint(tablet){
+            padding-bottom: 45px;
+        }
         img {
             width: 50%;
             float: left;
             margin: 0;
+            @include breakpoint(tablet){
+                width: 100%;
+            }
         }
         p, h1 {
             float: left;
@@ -112,6 +125,9 @@
             width: 38%;
             margin-left: 6%;
             margin-right: 6%;
+            @include breakpoint(tablet){
+                width: 88%;
+            }
         }
         .btn {
             float: left;
@@ -126,6 +142,19 @@
         color: black;
         padding: 60px;
         text-align: center;
+        @include breakpoint(tablet){
+            padding: 45px 25px;
+            h1 {
+                font-size: 40px;
+                padding-top: 0;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+            p {
+                width: 100%;
+            }
+        }
         li {
             list-style: none;
             display: inline-block;
@@ -150,7 +179,13 @@
             position: relative;
             @include breakpoint(tablet){
                 width: 100%;
-                padding: 20px;
+                padding: 40px 20px;
+                h4 {
+                    font-size: 16px;
+                }
+                h2 {
+                    font-size: 40px;
+                }
             }
             h2, a.btn, h4 {
                 position: relative;

@@ -95,14 +95,14 @@ header#client-header {
     padding-right: 80px;
     margin: auto;
     position: fixed;
-    background: transparent;
+    background: black;
     right: 0;
     left: 0;
     top: 0;
     z-index: 999;
     max-width: 1400px;
     @include breakpoint(tablet){
-        
+        background: transparent;
     }
     a {
         color: white;
@@ -137,8 +137,12 @@ header#client-header {
         align-items: center;
         display: flex;
         justify-content: center;
+        text-decoration: none;
         .words {
             float: left;
+        }
+        @include breakpoint(tablet){
+            display: none;
         }
     }
 
@@ -159,12 +163,6 @@ header#client-header {
         .container {
             padding: 1.5rem 0rem;
         }
-    }
-
-    .logo {
-        align-items: center;
-        display: flex;
-        text-decoration: none;
     }
 
     .logo .lips {
@@ -290,6 +288,9 @@ header#client-header {
         text-decoration: none;
         text-transform: uppercase;
         transition: color 0.2s linear;
+        position: absolute;
+        right: 25px;
+        top: 25px;
     }
 
     .menu-icon {
@@ -320,6 +321,10 @@ header#client-header {
         transform: translate3d(0,0.6rem,0);
     }
 
+    .menu-icon span:nth-child(4) {
+        transform: translate3d(0,1.2rem,0);
+    }
+
     .menu-icon.active span:nth-child(1) {
         background: transparent;
         top: 0;
@@ -331,6 +336,11 @@ header#client-header {
     }
 
     .menu-icon.active span:nth-child(3) {
+        background: #fff;
+        transform: rotate3d(0,0,1,-45deg);
+    }
+
+    .menu-icon.active span:nth-child(4) {
         background: #fff;
         transform: rotate3d(0,0,1,-45deg);
     }
