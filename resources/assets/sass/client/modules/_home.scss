@@ -13,8 +13,18 @@
         padding: 100px;
         color: white;
         text-align: center;
+        @include breakpoint(mobile){
+            padding-left: 25px;
+            padding-right: 25px;
+        }
         h1 {
             color: white;
+            @include breakpoint(tablet){
+                font-size: 6.5vw;
+            }
+            @include breakpoint(mobile){
+                font-size: 7.5vw;
+            }
         }
         > i {
             margin-top: 30px;
@@ -138,6 +148,10 @@
             padding: 80px;
             color: white;
             position: relative;
+            @include breakpoint(tablet){
+                width: 100%;
+                padding: 20px;
+            }
             h2, a.btn, h4 {
                 position: relative;
                 z-index: 2;
@@ -162,6 +176,9 @@
         margin-top: 60px;
         margin-bottom: 60px;
         position: relative;
+        @include breakpoint(mobile){
+            width: 100%;
+        }
     }
 
     @media screen and (min-width: 962px) {

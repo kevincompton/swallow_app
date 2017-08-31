@@ -1,6 +1,7 @@
 @import "/client/_reset";
 
 @import "/client/global/_typography";
+@import "/client/global/_responsive";
 
 @import "/client/_junkdrawer";
 
@@ -26,6 +27,9 @@ hr {
   max-width: 1400px;
   margin: auto;
   margin-top: 80px;
+  @include breakpoint(tablet){
+    margin-top: 0;
+  }
 }
 .partners-container {
   background: white;

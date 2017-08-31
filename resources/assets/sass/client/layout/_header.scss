@@ -92,15 +92,18 @@ $wrapper-margin: 15%;
 
 header#client-header {
     padding-left: 80px;
-  padding-right: 80px;
+    padding-right: 80px;
     margin: auto;
     position: fixed;
-    background: black;
+    background: transparent;
     right: 0;
     left: 0;
     top: 0;
     z-index: 999;
     max-width: 1400px;
+    @include breakpoint(tablet){
+        
+    }
     a {
         color: white;
         text-decoration: none;
