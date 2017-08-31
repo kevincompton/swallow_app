@@ -191,11 +191,12 @@ if(filterProducts != null){
 
       setLocation: function() {
         var parent = this;
-
-        navigator.geolocation.getCurrentPosition(function(location) {
-          parent.latitude = location.coords.latitude;
-          parent.longitude = location.coords.longitude;
-        });
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(location) {
+            parent.latitude = location.coords.latitude;
+            parent.longitude = location.coords.longitude;
+          });
+        }
 
         this.fetchProducts();
 
