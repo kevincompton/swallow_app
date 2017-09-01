@@ -13,11 +13,19 @@ $wrapper-margin: 15%;
   margin: auto;
   box-shadow: 0 0 30px rgba(0,0,0,0.25);
   z-index: 999;
+  @include breakpoint(tablet) {
+    top: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .selected-filters {
     width: 48%;
     float: left;
     margin-top: 12px;
     margin-left: 2%;
+    @include breakpoint(tablet) {
+        display: none;
+    }
     span {
         display: inline-block;
         color: #fa3668;
@@ -45,6 +53,9 @@ $wrapper-margin: 15%;
     border: solid 1px #cbcccd;
     background: white;
     float: left;
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
     input {
         border-radius: 100px;
         border: none;
@@ -73,6 +84,11 @@ $wrapper-margin: 15%;
                 right: 7rem;
                 line-height: 46px;
                 padding-left: 30px;
+                span {
+                    @include breakpoint(mobile){
+                        display: none;
+                    }
+                }
                 i {
                     margin-left: 5px;
                 }
@@ -90,6 +106,17 @@ $wrapper-margin: 15%;
         }
 }
 
+.body__welcome {
+    header#client-header {
+        @include breakpoint(tablet){
+            background: transparent;
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
+
 header#client-header {
     padding-left: 80px;
     padding-right: 80px;
@@ -101,9 +128,6 @@ header#client-header {
     top: 0;
     z-index: 999;
     max-width: 1400px;
-    @include breakpoint(tablet){
-        background: transparent;
-    }
     a {
         color: white;
         text-decoration: none;
@@ -141,14 +165,15 @@ header#client-header {
         .words {
             float: left;
         }
-        @include breakpoint(tablet){
-            display: none;
-        }
     }
 
-    .logo img {
+    .logo img.lips {
         float: left;
         width: auto;
+        @include breakpoint(mobile){
+            height: 30px;
+            margin-left: -80px;
+        }
     }
 
     .container {
@@ -355,7 +380,7 @@ header#client-header {
         left: 0;
         position: fixed;
         right: 0;
-        top: 0;
+        top: -25px;
         z-index: 100;
     }
 

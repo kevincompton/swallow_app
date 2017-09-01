@@ -15,7 +15,7 @@
           class="form-control input-lg search"
           placeholder="Search products..."
         >
-        <button type="reset" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+        <button type="reset" class="filter"><span>FILTERS</span> <i class="fa fa-angle-down" aria-hidden="true"></i></button>
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
       </div>
 
