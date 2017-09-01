@@ -48,6 +48,9 @@ a {
 
 h1 {
   font-size: 60px;
+  @include breakpoint(mobile){
+    font-size: 40px;
+  }
 }
 
 h2 {

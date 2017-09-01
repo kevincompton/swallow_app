@@ -2,13 +2,18 @@ body.body__product {
   .client-wrapper {
     padding: 20px 100px;
     background: white;
+    @include breakpoint(tablet){
+      padding: 50px 25px;
+    }
   }
 }
 .product-single {
   display: block;
   padding: 0 3rem;
   width: 100%;
-
+  @include breakpoint(tablet){
+    padding: 0;
+  }
   .flex-container {
       font-size: 1.6rem;
       line-height: 133%;

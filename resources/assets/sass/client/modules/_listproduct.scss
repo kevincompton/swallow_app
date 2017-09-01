@@ -1,6 +1,9 @@
 body.body__products {
   .client-wrapper {
     padding: 80px 100px;
+    @include breakpoint(mobile){
+      padding: 150px 25px;
+    }
   }
 }
 section#product-list {
@@ -28,6 +31,9 @@ section#product-list {
     padding: 1.5rem;
     text-align: center;
     width: calc(86% / 2);
+    @include breakpoint(tablet){
+      width: 100%;
+    }
   }
 
   @media screen and (min-width: 60rem) {

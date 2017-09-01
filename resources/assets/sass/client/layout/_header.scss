@@ -13,11 +13,19 @@ $wrapper-margin: 15%;
   margin: auto;
   box-shadow: 0 0 30px rgba(0,0,0,0.25);
   z-index: 999;
+  @include breakpoint(tablet) {
+    top: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .selected-filters {
     width: 48%;
     float: left;
     margin-top: 12px;
     margin-left: 2%;
+    @include breakpoint(tablet) {
+        display: none;
+    }
     span {
         display: inline-block;
         color: #fa3668;
@@ -45,6 +53,9 @@ $wrapper-margin: 15%;
     border: solid 1px #cbcccd;
     background: white;
     float: left;
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
     input {
         border-radius: 100px;
         border: none;
@@ -73,6 +84,11 @@ $wrapper-margin: 15%;
                 right: 7rem;
                 line-height: 46px;
                 padding-left: 30px;
+                span {
+                    @include breakpoint(mobile){
+                        display: none;
+                    }
+                }
                 i {
                     margin-left: 5px;
                 }
@@ -90,9 +106,20 @@ $wrapper-margin: 15%;
         }
 }
 
+.body__welcome {
+    header#client-header {
+        @include breakpoint(tablet){
+            background: transparent;
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
+
 header#client-header {
     padding-left: 80px;
-  padding-right: 80px;
+    padding-right: 80px;
     margin: auto;
     position: fixed;
     background: black;
@@ -134,14 +161,19 @@ header#client-header {
         align-items: center;
         display: flex;
         justify-content: center;
+        text-decoration: none;
         .words {
             float: left;
         }
     }
 
-    .logo img {
+    .logo img.lips {
         float: left;
         width: auto;
+        @include breakpoint(mobile){
+            height: 30px;
+            margin-left: -80px;
+        }
     }
 
     .container {
@@ -156,12 +188,6 @@ header#client-header {
         .container {
             padding: 1.5rem 0rem;
         }
-    }
-
-    .logo {
-        align-items: center;
-        display: flex;
-        text-decoration: none;
     }
 
     .logo .lips {
@@ -287,6 +313,9 @@ header#client-header {
         text-decoration: none;
         text-transform: uppercase;
         transition: color 0.2s linear;
+        position: absolute;
+        right: 25px;
+        top: 25px;
     }
 
     .menu-icon {
@@ -317,6 +346,10 @@ header#client-header {
         transform: translate3d(0,0.6rem,0);
     }
 
+    .menu-icon span:nth-child(4) {
+        transform: translate3d(0,1.2rem,0);
+    }
+
     .menu-icon.active span:nth-child(1) {
         background: transparent;
         top: 0;
@@ -332,6 +365,11 @@ header#client-header {
         transform: rotate3d(0,0,1,-45deg);
     }
 
+    .menu-icon.active span:nth-child(4) {
+        background: #fff;
+        transform: rotate3d(0,0,1,-45deg);
+    }
+
     .mobile-nav {
         display: none; 
         align-items: center;
@@ -342,7 +380,7 @@ header#client-header {
         left: 0;
         position: fixed;
         right: 0;
-        top: 0;
+        top: -25px;
         z-index: 100;
     }
 

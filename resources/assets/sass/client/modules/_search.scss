@@ -5,6 +5,11 @@
         height: 50px;
         border: solid 2px rgba(275,275,275,0.25);
         background:white;
+        input.input-lg {
+            @include breakpoint(mobile){
+                font-size: 14px;
+            }
+        }
         button {
             cursor: pointer;
             position: absolute;
@@ -18,10 +23,15 @@
             padding-left: 2rem;
             padding-right: 2rem;
             &.filter {
-                background: transparent;
+                background: white;
                 border: none;
                 border-right: 1px solid #ccc;
                 border-top: 1px solid #ccc;
+                span {
+                    @include breakpoint(mobile){
+                        display: none;   
+                    }
+                }
                 &.active {
                     background: #f4f4f4;
                     border-bottom: 1px solid #ccc;

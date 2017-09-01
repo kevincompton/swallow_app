@@ -18,8 +18,8 @@
         <div class="options">
             
             <div class="input-zip-code">
-                <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search directory by keyword or select filters...">
-                <button type="button" class="filter">FILTERS <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <input class="form-control input-lg search" formControlName="search" name="search" type="text" placeholder="Search or select filters...">
+                <button type="button" class="filter"><span>FILTERS</span> <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
             <div id="home-dropdown" class="dropdown">

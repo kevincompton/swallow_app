@@ -7,6 +7,9 @@ section.partners {
         background-size: cover;
         padding: 60px;
         position: relative;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
         a, h2 {
             position: relative;
             z-index: 2;
