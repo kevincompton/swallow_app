@@ -82,7 +82,7 @@
         <h2>List your edible in Swallow's directory</h2>
         <a href="/register?category=edibles" class="btn">ADD YOUR EDIBLES</a>
       </div>
-      <div style="background-image: url(/images/redesign/photos/french-delicious-dessert-macaroons-PTQG8GV.jpg)">
+      <div style="background-image: url(/images/redesign/photos/table-with-cake-pie-cupcakes-tarts-and-cakepops-P6F3KCU.jpg)">
         <h2>Add your dispensary to our directory</h2>
         <a href="/register?category=dispensary" class="btn">ADD YOUR DISPENSARY</a>
       </div>
