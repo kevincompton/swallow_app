@@ -13,7 +13,7 @@
             {{ csrf_field() }}
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <label for="name" class="col-md-4 control-label">Name</label>
+                <label for="name" class="col-md-4 control-label">Your Name</label>
 
                 <div class="col-md-6">
                     <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -27,13 +27,13 @@
             </div>
 
             <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
-                <label for="category" class="col-md-4 control-label">Category</label>
+                <label for="category" class="col-md-4 control-label">Company Type</label>
 
                 <div class="col-md-6">
                     <select v-on:change="categoryUpdate" v-model="category" class="form-control" id="category" name="category">
                         <option disabled selected>Please select type of company...</option>
                         <option value="dispensary">Dispensary</option>
-                        <option value="edibles">Edibles</option>
+                        <option value="edibles">Edibles / Topicals</option>
                     </select>
 
                     @if ($errors->has('name'))
@@ -45,7 +45,7 @@
             </div>
 
             <div v-show="category != null" class="form-group{{ $errors->has('company') ? ' has-error' : '' }}">
-                <h4>Add @{{ category }}</h4>
+                <h4>Add Company Name</h4>
 
                 <div v-if="new_form == false" id="onboard_autocomplete">
                     <autocomplete-input v-if="company == null" :options="options" @select="onOptionSelect">
@@ -107,7 +107,7 @@
 
                 <div v-if="confirm != null">
                     <p v-if="company == null">
-                        Add the company <strong>@{{ confirm.title }}</strong>?
+                        Create profile for <strong>@{{ confirm.title }}</strong>?
                         <button v-on:click="setCompany(confirm)">Yes</button> <button>cancel</button>
                     </p>
                 </div>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password" class="col-md-4 control-label">Password</label>
+                <label for="password" class="col-md-4 control-label">Password *must be at least 6 characters long</label>
 
                 <div class="col-md-6">
                     <input id="password" type="password" class="form-control" name="password" required>

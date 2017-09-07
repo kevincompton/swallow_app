@@ -89,7 +89,7 @@
   <section class="about">
     <img src="/images/redesign/photos/cookie-sandwiches-PFMYYA6.jpg" />
     <h1>Why Edibles?</h1>
-    <p>Edibles are discrete, delicious, reasonably priced, and effective. Edibles are perfect for those moments when you want to be medicated but can't smoke. Edibles have advanced over the years, which has led to most edibles being lab tested for THC content. By consuming a lab tested edible, you will have more control over the high you wish to receive. If you have had a bad high and are afraid of edibles, keep reading to learn how to enjoy edibles the right way.</p>
+    <p>Edibles are discrete, delicious, reasonably priced, and effective. Edibles are perfect for those moments when you want to be medicated but can't smoke.</p>
     <br>
     <a href="/education" class="btn">LEARN ABOUT EDIBLES</a>
     <div class="clear"></div>
@@ -97,14 +97,14 @@
 
   <section class="news">
     <h1>Latest News</h1>
-    <article style="background-image: url(/images/redesign/photos/kivablueberries3.jpg)">
-      <h3>Kiva Terra Blueberries</h3>
-      <p>Kiva milk chocolate covered blueberries are soooo tasty!</p>
+    <article style="background-image: url(/images/products/fruit-farm.jpg)">
+      <h3>Hello Fruit Farm Pineapple Loud</h3>
+      <p>These dried pineapple slices have a delicious sweetness to them.</p>
       <a href="https://blog.swallow.la/2017/07/16/kiva-terra-blueberries/" target="_blank" class="btn">READ MORE</a>
     </article>
-    <article style="background-image: url(/images/redesign/photos/fullsizerender.jpg)">
-      <h3>The edible to avoid</h3>
-      <p>I came across EndoHack Labs at the 4.20 Games...</p>
+    <article style="background-image: url(/images/products/mbox.jpg)">
+      <h3>Unboxing MBOX</h3>
+      <p>My guest Jesushands and I unboxed M Box Volume 16...</p>
       <a href="https://blog.swallow.la/2017/04/09/the-edible-to-avoid-if-you-use-cannabis-as-a-medicine/" target="_blank" class="btn">READ MORE</a>
     </article>
     <article style="background-image: url(/images/redesign/photos/cannacurebalm.jpg)">
