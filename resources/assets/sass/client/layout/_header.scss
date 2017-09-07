@@ -170,7 +170,7 @@ header#client-header {
     .logo img.lips {
         float: left;
         width: auto;
-        height: 80px;
+        height: 60px;
         @include breakpoint(mobile){
             height: 30px;
             margin-left: -80px;
