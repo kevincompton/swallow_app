@@ -271,6 +271,23 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "resources/assets/sass/client/layout/_header.scss",
+			"settings":
+			{
+				"buffer_size": 8408,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/wpCompany.php",
+			"settings":
+			{
+				"buffer_size": 949,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -583,7 +600,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -611,6 +628,66 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1598.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/assets/sass/client/layout/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3807,
+								3807
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2247.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/wpCompany.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -667,6 +744,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"_he",
+				"resources/assets/sass/client/layout/_header.scss"
+			],
 			[
 				"app",
 				"app/Providers/AppServiceProvider.php"
