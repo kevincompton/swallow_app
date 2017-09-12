@@ -98,7 +98,7 @@ class HomeController extends Controller
             ->select('dispensary_id')
             ->get();
 
-        if($related_dispensaries[0]) {
+        if($related_dispensaries) {
             foreach ($related_dispensaries[0] as $key => $related) {
                 $dispensary = \App\Company::find($related);
                 $dispensaries->prepend($dispensary);
