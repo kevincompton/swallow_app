@@ -98,13 +98,12 @@ class HomeController extends Controller
             ->select('dispensary_id')
             ->get();
 
-        //return $related_dispensaries;
-
-        foreach ($related_dispensaries[0] as $key => $related) {
-            $dispensary = \App\Company::find($related);
-            $dispensaries->prepend($dispensary);
+        if($related_dispensaries[0]) {
+            foreach ($related_dispensaries[0] as $key => $related) {
+                $dispensary = \App\Company::find($related);
+                $dispensaries->prepend($dispensary);
+            }
         }
-
 
         $data = [
             "user" => $user,
