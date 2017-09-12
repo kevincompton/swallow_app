@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"relat",
+				"related_dispensaries"
+			],
+			[
 				"marg",
 				"margin-right"
 			],
@@ -282,10 +286,10 @@
 			}
 		},
 		{
-			"file": "app/wpCompany.php",
+			"file": "app/Http/Controllers/HomeController.php",
 			"settings":
 			{
-				"buffer_size": 949,
+				"buffer_size": 3160,
 				"line_ending": "Unix"
 			}
 		}
@@ -665,19 +669,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/wpCompany.php",
-					"semi_transient": true,
+					"file": "app/Http/Controllers/HomeController.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 949,
+						"buffer_size": 3160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2579,
+								2579
 							]
 						],
 						"settings":
@@ -687,7 +691,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1113.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
