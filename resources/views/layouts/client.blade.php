@@ -24,9 +24,9 @@
 
         <ul class="tools">
           <li>FOLLOW US</li>
-          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com/worldslargestedibledirectory"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://twitter.com/swallowla"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/swallow.la/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           <li class="spacer">|</li>
           @if (Auth::guest())
             <li><a href="/register">SIGN IN / SIGNUP</a></li>
@@ -92,8 +92,7 @@
     <nav class="footer-primary">
       <ul>
         <li>Who Are We</li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Education</a></li>
+        <li><a href="/education">Education</a></li>
         <li><a href="/register?category=edibles">Submit Edible</a></li>
         <li><a href="/register?category=dispensary">Submit Dispensary</a></li>
         <li><a href="http://blog.swallow.la" target="_blank">News & Reviews</a></li>
