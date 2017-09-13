@@ -22,7 +22,7 @@ class ProductController extends Controller
       $product->user_id = $user->id;
       $product->name = $request->name;
       $product->ingredients = $request->ingredients;
-      $product->strength = $request->strength;
+      $product->strength = $request->strength_cbd . ' ' . $request->strength_thc;
       $product->description = $request->description;
       $product->wordpress_id = 0;
       $product->brand_id = $company->id;

@@ -11,8 +11,22 @@
                         <input autofocus name="name" type="text" class="form-control" id="name" placeholder="Product Name">
                     </div>
                     <div class="form-group">
-                        <label for="strength">Product Strength</label>
-                        <input name="strength" type="text" class="form-control" id="strength" placeholder="Product Strength">
+                        <label for="strength">CBD Strength</label>
+                        <select name="strength_cbd">
+                           <option>0-20 mg CBD</option>
+                           <option>21-100 mg CBD</option>
+                           <option>101-250 CBD</option>
+                           <option>251+ mg CDB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="strength">THC Strength</label>
+                        <select name="strength_thc">
+                           <option>0-20 mg THC</option>
+                           <option>21-100 mg THC</option>
+                           <option>101-250 THC</option>
+                           <option>251+ mg THC</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-6">
