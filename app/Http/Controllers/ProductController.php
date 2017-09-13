@@ -13,6 +13,13 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
+
+      $this->validate($request, [
+        'name' => 'required|unique:posts|max:255',
+        'ingredients' => 'required',
+        'description' => 'required',
+      ]);
+
       $tags = $request->filter;
       $user = Auth::user();
       $company = \App\Company::find($user->company_id);

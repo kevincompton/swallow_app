@@ -1,4 +1,4 @@
-<div class="modal add_product_modal">
+<div class="modal add_product_modal @if($errors->any()) errors @endif">
     <div class="modal-wrap">
         <i id="cancel" class="fa fa-times-circle-o modal_close" aria-hidden="true"></i>
         <h3>Add Product</h3>
@@ -62,7 +62,7 @@
                     <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
                         <label for="image">Product Image</label>
                         <input type="file" id="image" name="image">
-                        <p class="help-block">Example block-level help text here.</p>
+                        
                         @if ($errors->has('image'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('image') }}</strong>
