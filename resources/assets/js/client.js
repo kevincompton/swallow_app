@@ -159,7 +159,7 @@ if(filterProducts != null){
         var url_string = window.location.href;
         var url = new URL(url_string);
 
-        if(url.searchParams.get("search") != '') {
+        if(url.searchParams.get("search") != '' && url.searchParams.get() != undefined) {
           this.keywords = url.searchParams.get("search");
         }
         
